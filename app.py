@@ -1609,9 +1609,8 @@ html_template = """
             
             resetOnlineBoard();
             updateGamePhase(data.phase, data.current_turn);
-            addChatMessage('System', '🎮 بدأت اللعبة الآن!');
         });
-        socket.on('phase_changed', (data) => { updateGamePhase(data.phase, data.current_turn); if (data.message) addChatMessage('System', data.message); });
+        socket.on('phase_changed', (data) => { updateGamePhase(data.phase, data.current_turn); });
         socket.on('hand_checked', (data) => {
             const box = document.getElementById('online-box' + data.hand_id);
             const img = document.getElementById('online-img' + data.hand_id);
@@ -1621,7 +1620,6 @@ html_template = """
                 box.classList.add('fail'); 
                 img.src = '/static/' + data.side + '_open.png'; 
                 playAudio('left1'); 
-                addChatMessage('System', data.message);
             }
             if (data.host_wins !== undefined) {
                 document.getElementById('player1-stats').innerText = data.host_wins;
@@ -1630,7 +1628,6 @@ html_template = """
             if (data.game_over_final) {
                 setTimeout(() => {
                     alert(data.win_msg);
-                    addChatMessage('System', data.win_msg);
                     
                     // الخروج التلقائي فوراً للقائمة الجانبية للبحث عن خصم آخر
                     leaveOnlineGame(); 
@@ -1675,10 +1672,6 @@ html_template = """
                 document.getElementById('player1-stats').innerText = data.host_wins;
                 document.getElementById('player2-stats').innerText = data.guest_wins;
             }
-            if (data.bet) {
-                addChatMessage('System', `💰 الرهان في هذه البطولة: ${data.bet} نقطة`);
-            }
-            addChatMessage('System', '🔄 بدأت جولة جديدة!');
         });
         socket.on('error', (data) => { 
             console.error('Server Error:', data.message);
