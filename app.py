@@ -703,11 +703,8 @@ html_template = """
                     <button class="btn-nav" onclick="toggleQuickChat()" style="font-size:12px; padding:8px 12px; width:auto; border-radius:10px;">💬 دردشة سريعة</button>
                     <div id="quick-chat-dropdown" class="quick-chat-dropdown">
                         <div class="chat-input-container">
-                            <input type="text" id="chat-custom-input" placeholder="اكتب رسالتك..." readonly>
+                            <input type="text" id="chat-custom-input" placeholder="اكتب رسالتك..." onkeypress="if(event.key === 'Enter') sendCustomChatMessage()">
                             <button class="chat-send-btn" onclick="sendCustomChatMessage()">إرسال</button>
-                        </div>
-                        <div id="keyboard-container" class="virtual-keyboard">
-                            <!-- الكيبورد سيتم تعبئته عبر JS -->
                         </div>
                         <div class="emoji-grid">
                             <button class="emoji-btn" onclick="sendQuickMessage('😂')">😂</button>
@@ -805,67 +802,6 @@ html_template = """
         window.username = '';
         window.displayName = '';
         window.profileImage = '';
-
-        // --- متغيرات الكيبورد ---
-        let currentLang = 'ar';
-        const layouts = {
-            ar: [
-                ['ض', 'ص', 'ث', 'ق', 'ف', 'غ', 'ع', 'ه', 'خ', 'ح'],
-                ['ج', 'د', 'ش', 'س', 'ي', 'ب', 'ل', 'ا', 'ت', 'ن'],
-                ['م', 'ك', 'ط', 'ذ', 'ء', 'ؤ', 'ر', 'ى', 'ة', 'و'],
-                ['ز', 'ظ', '!', '؟', '.', 'مسح', 'ABC', 'مسافة']
-            ],
-            en: [
-                ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
-                ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
-                ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Del'],
-                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', 'عربي', 'Space']
-            ]
-        };
-
-        function initKeyboard() {
-            const container = document.getElementById('keyboard-container');
-            if (!container) return;
-            container.innerHTML = '';
-            const layout = layouts[currentLang];
-            layout.forEach(row => {
-                row.forEach(key => {
-                    const btn = document.createElement('button');
-                    btn.className = 'key-btn';
-                    if (key === 'مسافة' || key === 'Space') btn.className += ' space';
-                    if (key === 'مسح' || key === 'Del' || key === 'ABC' || key === 'عربي') btn.className += ' special wide';
-                    btn.innerText = key;
-                    btn.onclick = () => handleKeyPress(key);
-                    container.appendChild(btn);
-                });
-            });
-        }
-
-        function handleKeyPress(key) {
-            const input = document.getElementById('chat-custom-input');
-            if (key === 'مسح' || key === 'Del') {
-                input.value = input.value.slice(0, -1);
-            } else if (key === 'ABC') {
-                currentLang = 'en';
-                initKeyboard();
-            } else if (key === 'عربي') {
-                currentLang = 'ar';
-                initKeyboard();
-            } else if (key === 'مسافة' || key === 'Space') {
-                input.value += ' ';
-            } else {
-                input.value += key;
-            }
-        }
-
-        function sendCustomChatMessage() {
-            const input = document.getElementById('chat-custom-input');
-            const text = input.value.trim();
-            if (!text) return;
-            sendQuickMessage(text);
-            input.value = '';
-            toggleQuickChat();
-        }
 
         // نظام الإحصائيات
         let stats = {
@@ -1033,6 +969,15 @@ html_template = """
             const modal = document.getElementById('profile-modal');
             modal.classList.remove('active');
             setTimeout(() => modal.style.display = 'none', 500);
+        }
+
+        function sendCustomChatMessage() {
+            const input = document.getElementById('chat-custom-input');
+            const text = input.value.trim();
+            if (!text) return;
+            sendQuickMessage(text);
+            input.value = '';
+            toggleQuickChat();
         }
 
         // --- وظائف الإحصائيات ---
@@ -1509,7 +1454,7 @@ html_template = """
             const dropdown = document.getElementById('quick-chat-dropdown');
             dropdown.classList.toggle('active');
             if (dropdown.classList.contains('active')) {
-                initKeyboard();
+                document.getElementById('chat-custom-input').focus();
             }
         }
 
