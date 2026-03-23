@@ -432,12 +432,11 @@ html_template = """
         #profile-modal {
             display: none;
             position: absolute;
-            top: 52px; /* تحت الهيدر مباشرة */
-            right: 15px; /* محاذاة مع الملف الشخصي في اليمين */
+            top: 60px; /* تحت الهيدر مباشرة */
+            right: 10px;
             width: 70px;
-            z-index: 5000; /* قيمة عالية جداً لضمان الظهور فوق كل شيء */
+            z-index: 9999;
             pointer-events: none;
-            background: none; /* إزالة الخلفية المعتمة */
         }
 
         #profile-modal.active {
@@ -458,7 +457,7 @@ html_template = """
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
         }
 
         #profile-modal.active .profile-content {
@@ -582,8 +581,6 @@ html_template = """
                 </div>
                 
                 <button class="btn-nav" onclick="closeProfile()" style="margin-top:5px; background:rgba(255,255,255,0.1); color:white; font-size:9px; padding:4px; width:100%;">🔼</button>
-            </div>
-        </div>
             </div>
         </div>
 
