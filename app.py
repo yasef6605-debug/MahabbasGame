@@ -1081,6 +1081,21 @@ html_template = """
         let pendingToSid = null;
 
         function sendInvitation(toSid) {
+            const self = players.find(p => p.sid === socket.id);
+            const opponent = players.find(p => p.sid === toSid);
+
+            if (!self || !opponent) {
+                alert('خطأ في جلب بيانات اللاعبين. يرجى تحديث الصفحة.');
+                console.error("Could not find player data. Self:", self, "Opponent:", opponent);
+                return;
+            }
+
+            // منع اللاعب من تحدي نفسه عبر التحقق من هوية اللاعب
+            if (self.player_id === opponent.player_id) {
+                alert("لا يمكنك تحدي نفسك!");
+                return;
+            }
+
             pendingToSid = toSid;
             document.getElementById('bet-modal').style.display = 'flex';
         }
