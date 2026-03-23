@@ -1,0 +1,895 @@
+2026-03-22 21:57:19,007 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 21:57:19] "GET / HTTP/1.1" 200 79185 0.014990
+2026-03-22 21:57:19,244 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 21:57:19] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.046208
+2026-03-22 21:57:19,246 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 21:57:19] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000997
+2026-03-22 21:57:19,254 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 21:57:19] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002992
+2026-03-22 21:57:19,457 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 21:57:19] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-22 21:57:19,467 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 21:57:19] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000999
+2026-03-22 21:57:19,470 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 21:57:19] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001357
+2026-03-22 21:57:19,471 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 21:57:19] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-22 21:57:20,220 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 21:57:20] "GET /favicon.ico HTTP/1.1" 404 331 0.001965
+2026-03-22 22:00:05,287 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:05] "GET / HTTP/1.1" 200 79231 0.019976
+2026-03-22 22:00:05,350 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:05] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.051861
+2026-03-22 22:00:05,355 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:05] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001996
+2026-03-22 22:00:05,372 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:05] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.015563
+2026-03-22 22:00:05,374 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:05] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001994
+2026-03-22 22:00:05,376 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:05] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001027
+2026-03-22 22:00:05,378 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:05] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001115
+2026-03-22 22:00:05,380 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:05] "GET /sounds/2.mp3 HTTP/1.1" 206 24907 0.000997
+2026-03-22 22:00:05,381 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:05] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000000
+2026-03-22 22:00:06,460 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:00:06] "GET /favicon.ico HTTP/1.1" 404 331 0.007159
+2026-03-22 22:02:54,981 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:54] "GET / HTTP/1.1" 200 79013 0.016949
+2026-03-22 22:02:55,036 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:55] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.044424
+2026-03-22 22:02:55,039 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:55] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000997
+2026-03-22 22:02:55,042 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:55] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001995
+2026-03-22 22:02:55,046 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:55] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002992
+2026-03-22 22:02:55,048 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:55] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000998
+2026-03-22 22:02:55,052 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:55] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.002014
+2026-03-22 22:02:55,053 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:55] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000998
+2026-03-22 22:02:55,056 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:55] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001995
+2026-03-22 22:02:55,922 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:02:55] "GET /favicon.ico HTTP/1.1" 404 331 0.007257
+2026-03-22 22:03:01,387 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:01] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001994
+2026-03-22 22:03:02,705 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:02] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.001999
+2026-03-22 22:03:04,755 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:04] "GET / HTTP/1.1" 200 79013 0.018709
+2026-03-22 22:03:04,779 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:04] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000997
+2026-03-22 22:03:04,784 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:04] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000998
+2026-03-22 22:03:06,482 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:06] "GET /static/right_open.png HTTP/1.1" 200 100514 0.000995
+2026-03-22 22:03:06,858 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:06] "GET /static/left_open.png HTTP/1.1" 304 189 0.001991
+2026-03-22 22:03:07,210 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:07] "GET /static/right_winner.png HTTP/1.1" 304 193 0.002101
+2026-03-22 22:03:08,688 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:08] "GET / HTTP/1.1" 200 79013 0.015955
+2026-03-22 22:03:08,711 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:08] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001995
+2026-03-22 22:03:08,715 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:08] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000997
+2026-03-22 22:03:11,588 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:11] "GET /static/right_winner.png HTTP/1.1" 304 193 0.001995
+2026-03-22 22:03:16,587 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:16] "GET /static/right_open.png HTTP/1.1" 304 190 0.000997
+2026-03-22 22:03:17,090 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:17] "GET /static/left_open.png HTTP/1.1" 304 189 0.000998
+2026-03-22 22:03:17,596 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:17] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.002986
+2026-03-22 22:03:29,077 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:29] "GET /static/right_open.png HTTP/1.1" 304 190 0.000000
+2026-03-22 22:03:29,562 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:29] "GET /static/left_winner.png HTTP/1.1" 304 192 0.000000
+2026-03-22 22:03:38,777 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:03:38] "GET /static/right_winner.png HTTP/1.1" 304 193 0.000000
+2026-03-22 22:08:37,098 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 22:08:38,407 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET / HTTP/1.1" 200 97926 0.049862
+2026-03-22 22:08:38,539 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.062905
+2026-03-22 22:08:38,541 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000996
+2026-03-22 22:08:38,542 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 22:08:38,544 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000998
+2026-03-22 22:08:38,546 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000998
+2026-03-22 22:08:38,548 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001145
+2026-03-22 22:08:38,549 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000998
+2026-03-22 22:08:38,550 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000000
+2026-03-22 22:08:38,555 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:38] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001994
+2026-03-22 22:08:39,951 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:08:39] "GET /favicon.ico HTTP/1.1" 404 331 0.001994
+2026-03-22 22:09:57,527 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:09:57] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001994
+2026-03-22 22:09:57,711 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:09:57] "GET /sounds/1.mp3 HTTP/1.1" 206 11516 0.000998
+2026-03-22 22:12:27,211 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 22:12:28,226 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:12:28] "GET / HTTP/1.1" 200 97934 0.019948
+2026-03-22 22:12:28,420 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:12:28] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.065982
+2026-03-22 22:12:28,423 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:12:28] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001994
+2026-03-22 22:12:28,429 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:12:28] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.005189
+2026-03-22 22:12:28,434 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:12:28] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.003988
+2026-03-22 22:12:28,435 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:12:28] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-22 22:12:28,437 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:12:28] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000997
+2026-03-22 22:12:28,440 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:12:28] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000998
+2026-03-22 22:12:30,392 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:12:30] "GET /favicon.ico HTTP/1.1" 404 331 0.000998
+2026-03-22 22:16:37,313 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 22:16:38,409 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET / HTTP/1.1" 200 98374 0.020025
+2026-03-22 22:16:38,609 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.064260
+2026-03-22 22:16:38,611 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000998
+2026-03-22 22:16:38,613 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000995
+2026-03-22 22:16:38,614 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 22:16:38,617 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001994
+2026-03-22 22:16:38,619 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000998
+2026-03-22 22:16:38,621 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.002001
+2026-03-22 22:16:38,623 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000996
+2026-03-22 22:16:38,624 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:38] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-22 22:16:39,807 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:16:39] "GET /favicon.ico HTTP/1.1" 404 331 0.001994
+2026-03-22 22:18:57,910 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 22:18:59,037 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET / HTTP/1.1" 200 98714 0.025931
+2026-03-22 22:18:59,259 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.067402
+2026-03-22 22:18:59,261 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000998
+2026-03-22 22:18:59,263 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-22 22:18:59,267 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001994
+2026-03-22 22:18:59,269 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 22:18:59,271 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000995
+2026-03-22 22:18:59,273 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-22 22:18:59,274 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-22 22:18:59,278 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:18:59] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.003175
+2026-03-22 22:19:00,453 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:19:00] "GET /favicon.ico HTTP/1.1" 404 331 0.005984
+2026-03-22 22:21:52,436 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 22:21:54,125 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:54] "GET / HTTP/1.1" 200 98736 0.042428
+2026-03-22 22:21:54,255 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:54] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.065004
+2026-03-22 22:21:54,257 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:54] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000997
+2026-03-22 22:21:54,259 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:54] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001067
+2026-03-22 22:21:54,260 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:54] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-22 22:21:54,265 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:54] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-22 22:21:54,267 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:54] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 22:21:54,270 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:54] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.003090
+2026-03-22 22:21:54,272 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:54] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000998
+2026-03-22 22:21:55,038 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:21:55] "GET /favicon.ico HTTP/1.1" 404 331 0.005982
+2026-03-22 22:24:31,514 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 22:24:33,099 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET / HTTP/1.1" 200 98808 0.068781
+2026-03-22 22:24:33,181 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.068461
+2026-03-22 22:24:33,190 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.006982
+2026-03-22 22:24:33,193 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000997
+2026-03-22 22:24:33,196 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001994
+2026-03-22 22:24:33,200 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002992
+2026-03-22 22:24:33,204 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.002992
+2026-03-22 22:24:33,206 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000996
+2026-03-22 22:24:33,233 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /sounds/2.mp3 HTTP/1.1" 206 24907 0.025033
+2026-03-22 22:24:33,235 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-22 22:24:33,886 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:24:33] "GET /favicon.ico HTTP/1.1" 404 331 0.001994
+2026-03-22 22:33:23,889 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 22:33:27,003 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET / HTTP/1.1" 200 98808 0.038003
+2026-03-22 22:33:27,286 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.062943
+2026-03-22 22:33:27,289 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001103
+2026-03-22 22:33:27,290 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 22:33:27,292 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-22 22:33:27,294 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-22 22:33:27,296 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-22 22:33:27,297 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000000
+2026-03-22 22:33:27,299 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000000
+2026-03-22 22:33:27,300 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:27] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 22:33:28,327 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:33:28] "GET /favicon.ico HTTP/1.1" 404 331 0.002165
+2026-03-22 22:46:48,189 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 22:46:52,798 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:46:52] "GET / HTTP/1.1" 200 94741 0.074283
+2026-03-22 22:46:53,383 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:46:53] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.056144
+2026-03-22 22:46:53,386 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:46:53] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000998
+2026-03-22 22:46:53,388 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:46:53] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 22:46:53,392 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:46:53] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002002
+2026-03-22 22:46:53,412 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:46:53] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-22 22:46:53,413 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:46:53] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 22:46:53,415 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:46:53] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000998
+2026-03-22 22:46:54,724 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:46:54] "GET /favicon.ico HTTP/1.1" 404 331 0.001997
+2026-03-22 22:51:31,879 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 22:51:33,567 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET / HTTP/1.1" 200 94741 0.019310
+2026-03-22 22:51:33,682 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.063830
+2026-03-22 22:51:33,684 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000998
+2026-03-22 22:51:33,686 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000997
+2026-03-22 22:51:33,687 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001032
+2026-03-22 22:51:33,690 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001995
+2026-03-22 22:51:33,696 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.000998
+2026-03-22 22:51:33,697 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001085
+2026-03-22 22:51:33,698 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000998
+2026-03-22 22:51:33,700 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:33] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001995
+2026-03-22 22:51:34,626 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 22:51:34] "GET /favicon.ico HTTP/1.1" 404 331 0.006013
+2026-03-22 23:13:48,669 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 23:13:49,889 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:13:49] "GET / HTTP/1.1" 200 93875 0.018489
+2026-03-22 23:13:49,967 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:13:49] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.063531
+2026-03-22 23:13:49,970 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:13:49] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000998
+2026-03-22 23:13:50,447 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:13:50] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000997
+2026-03-22 23:13:50,457 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:13:50] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-22 23:13:50,461 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:13:50] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-22 23:13:50,463 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:13:50] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001995
+2026-03-22 23:13:50,465 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:13:50] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000909
+2026-03-22 23:13:50,799 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:13:50] "GET /favicon.ico HTTP/1.1" 404 331 0.001965
+2026-03-22 23:14:04,898 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:14:04] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.087955
+2026-03-22 23:14:09,268 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:14:09] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.011124
+2026-03-22 23:14:11,061 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:14:11] "GET /static/right_open.png HTTP/1.1" 200 100514 0.017175
+2026-03-22 23:14:12,032 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:14:12] "GET /static/left_open.png HTTP/1.1" 200 91170 0.010804
+2026-03-22 23:14:17,419 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:14:17] "GET / HTTP/1.1" 200 93875 0.019944
+2026-03-22 23:14:17,516 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:14:17] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000996
+2026-03-22 23:14:17,518 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:14:17] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001024
+2026-03-22 23:27:15,757 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 23:27:17,402 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:17] "GET / HTTP/1.1" 200 93980 0.018328
+2026-03-22 23:27:17,755 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:17] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.067794
+2026-03-22 23:27:17,761 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:17] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.003990
+2026-03-22 23:27:18,520 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:18] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 23:27:18,523 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:18] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-22 23:27:18,525 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:18] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-22 23:27:18,527 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:18] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001996
+2026-03-22 23:27:18,529 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:18] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-22 23:27:18,531 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:18] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-22 23:27:18,532 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:18] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 23:27:18,951 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:18] "GET /favicon.ico HTTP/1.1" 404 331 0.006981
+2026-03-22 23:27:24,313 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:24] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001995
+2026-03-22 23:27:28,916 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:28] "GET / HTTP/1.1" 200 93980 0.017951
+2026-03-22 23:27:28,929 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:28] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000997
+2026-03-22 23:27:28,931 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:28] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001030
+2026-03-22 23:27:41,056 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:41] "GET /static/left_open.png HTTP/1.1" 304 189 0.001028
+2026-03-22 23:27:42,175 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:42] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.000999
+2026-03-22 23:27:45,709 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:45] "GET / HTTP/1.1" 200 93980 0.017981
+2026-03-22 23:27:45,722 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:45] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001995
+2026-03-22 23:27:45,724 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:45] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000000
+2026-03-22 23:27:48,179 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:48] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001027
+2026-03-22 23:27:48,614 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:48] "GET /static/left_open.png HTTP/1.1" 304 189 0.000995
+2026-03-22 23:27:49,776 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:49] "GET /static/right_winner.png HTTP/1.1" 304 193 0.000997
+2026-03-22 23:27:49,794 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:27:49] "GET /sounds/2.mp3 HTTP/1.1" 206 14860 0.001000
+2026-03-22 23:28:00,930 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:28:00] "GET / HTTP/1.1" 200 93980 0.019948
+2026-03-22 23:28:00,946 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:28:00] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000991
+2026-03-22 23:28:00,950 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:28:00] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001994
+2026-03-22 23:28:00,961 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:28:00] "GET /sounds/2.mp3 HTTP/1.1" 206 33099 0.002991
+2026-03-22 23:28:00,971 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:28:00] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002993
+2026-03-22 23:33:04,100 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 23:33:05,744 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:05] "GET / HTTP/1.1" 200 93502 0.019292
+2026-03-22 23:33:05,835 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:05] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.056131
+2026-03-22 23:33:05,836 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:05] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000996
+2026-03-22 23:33:07,427 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:07] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000997
+2026-03-22 23:33:07,430 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:07] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001996
+2026-03-22 23:33:07,432 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:07] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000998
+2026-03-22 23:33:07,436 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:07] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 23:33:07,438 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:07] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-22 23:33:08,089 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:08] "GET /favicon.ico HTTP/1.1" 404 331 0.002991
+2026-03-22 23:33:17,841 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:17] "GET / HTTP/1.1" 200 93502 0.018221
+2026-03-22 23:33:17,855 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:17] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000997
+2026-03-22 23:33:17,857 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:33:17] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000997
+2026-03-22 23:53:05,232 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 23:53:08,321 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:08] "GET / HTTP/1.1" 200 93823 0.066529
+2026-03-22 23:53:08,488 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:08] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.071568
+2026-03-22 23:53:08,495 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:08] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.004191
+2026-03-22 23:53:09,198 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:09] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001051
+2026-03-22 23:53:09,208 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:09] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000000
+2026-03-22 23:53:09,219 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:09] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000998
+2026-03-22 23:53:09,221 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:09] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.000000
+2026-03-22 23:53:09,227 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:09] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001507
+2026-03-22 23:53:09,230 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:09] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-22 23:53:09,233 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:09] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000996
+2026-03-22 23:53:09,533 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:09] "GET /favicon.ico HTTP/1.1" 404 331 0.005186
+2026-03-22 23:53:17,253 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:17] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001009
+2026-03-22 23:53:19,060 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:19] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001994
+2026-03-22 23:53:21,801 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 23:53:22,838 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:22] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.001520
+2026-03-22 23:53:23,728 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:23] "GET / HTTP/1.1" 200 93823 0.038223
+2026-03-22 23:53:23,897 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:23] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.001997
+2026-03-22 23:53:23,905 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:23] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001703
+2026-03-22 23:53:24,418 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:24] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001994
+2026-03-22 23:53:24,461 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:24] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.004055
+2026-03-22 23:53:24,463 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:24] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000000
+2026-03-22 23:53:24,473 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:24] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001992
+2026-03-22 23:53:24,479 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:24] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000996
+2026-03-22 23:53:24,486 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:24] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.004354
+2026-03-22 23:53:24,492 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:24] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002033
+2026-03-22 23:53:25,327 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:25] "GET /favicon.ico HTTP/1.1" 404 331 0.000997
+2026-03-22 23:53:25,779 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:25] "GET / HTTP/1.1" 200 93823 0.020981
+2026-03-22 23:53:25,890 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:25] "GET /static/left_closed.png HTTP/1.1" 304 191 0.002989
+2026-03-22 23:53:25,897 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:25] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000997
+2026-03-22 23:53:28,839 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:28] "GET /static/right_open.png HTTP/1.1" 304 190 0.001994
+2026-03-22 23:53:29,276 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:29] "GET /static/left_open.png HTTP/1.1" 304 189 0.000997
+2026-03-22 23:53:30,633 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:30] "GET /static/left_winner.png HTTP/1.1" 304 192 0.000998
+2026-03-22 23:53:33,484 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:33] "GET / HTTP/1.1" 200 93823 0.020857
+2026-03-22 23:53:33,501 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:33] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001991
+2026-03-22 23:53:33,508 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:53:33] "GET /static/right_closed.png HTTP/1.1" 304 193 0.002918
+2026-03-22 23:54:14,802 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 23:54:17,427 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:17] "GET / HTTP/1.1" 200 93823 0.019769
+2026-03-22 23:54:17,755 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:17] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.060204
+2026-03-22 23:54:17,827 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:17] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.002490
+2026-03-22 23:54:19,816 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:19] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-22 23:54:19,843 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:19] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000998
+2026-03-22 23:54:19,895 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:19] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000000
+2026-03-22 23:54:19,898 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:19] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.000000
+2026-03-22 23:54:19,975 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:19] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000000
+2026-03-22 23:54:20,044 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:20] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001995
+2026-03-22 23:54:20,088 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:20] "GET /sounds/2.mp3 HTTP/1.1" 206 41291 0.008081
+2026-03-22 23:54:20,335 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:20] "GET /favicon.ico HTTP/1.1" 404 331 0.007256
+2026-03-22 23:54:26,084 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:26] "GET /static/left_open.png HTTP/1.1" 200 91170 0.000000
+2026-03-22 23:54:28,691 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:28] "GET /static/right_open.png HTTP/1.1" 200 100514 0.002022
+2026-03-22 23:54:30,070 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:54:30] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.000000
+2026-03-22 23:59:09,975 - MohibisGame - INFO - Database initialized successfully
+2026-03-22 23:59:11,474 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:11] "GET / HTTP/1.1" 200 102057 0.022894
+2026-03-22 23:59:11,688 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:11] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.061055
+2026-03-22 23:59:11,691 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:11] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001993
+2026-03-22 23:59:12,328 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:12] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002688
+2026-03-22 23:59:12,332 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:12] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001992
+2026-03-22 23:59:12,334 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:12] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001019
+2026-03-22 23:59:12,347 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:12] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000996
+2026-03-22 23:59:12,395 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:12] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.004426
+2026-03-22 23:59:12,400 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:12] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001077
+2026-03-22 23:59:12,406 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:12] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002502
+2026-03-22 23:59:12,661 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:12] "GET /favicon.ico HTTP/1.1" 404 331 0.001871
+2026-03-22 23:59:34,249 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:34] "GET /static/left_open.png HTTP/1.1" 200 91170 0.003526
+2026-03-22 23:59:36,120 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:36] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001563
+2026-03-22 23:59:36,600 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:36] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.002026
+2026-03-22 23:59:41,742 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:41] "GET /static/right_open.png HTTP/1.1" 304 190 0.002221
+2026-03-22 23:59:43,001 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:43] "GET /static/left_open.png HTTP/1.1" 304 189 0.000626
+2026-03-22 23:59:46,862 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:46] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.001770
+2026-03-22 23:59:50,821 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:50] "GET / HTTP/1.1" 200 102057 0.020378
+2026-03-22 23:59:50,838 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:50] "GET /static/left_closed.png HTTP/1.1" 304 191 0.002720
+2026-03-22 23:59:50,843 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:50] "GET /static/right_closed.png HTTP/1.1" 304 193 0.002059
+2026-03-22 23:59:50,854 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:50] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001991
+2026-03-22 23:59:50,865 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:50] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001045
+2026-03-22 23:59:50,870 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:50] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002065
+2026-03-22 23:59:53,826 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:53] "GET /static/left_open.png HTTP/1.1" 304 189 0.000000
+2026-03-22 23:59:54,583 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:54] "GET /static/right_open.png HTTP/1.1" 304 190 0.001467
+2026-03-22 23:59:55,326 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-22 23:59:55] "GET /static/left_winner.png HTTP/1.1" 304 192 0.000840
+2026-03-23 00:03:18,706 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:03:20,783 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:20] "GET / HTTP/1.1" 200 103219 0.026268
+2026-03-23 00:03:21,118 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:21] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.057540
+2026-03-23 00:03:21,121 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:21] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001651
+2026-03-23 00:03:22,217 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:22] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-23 00:03:22,223 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:22] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001995
+2026-03-23 00:03:22,231 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:22] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002993
+2026-03-23 00:03:22,235 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:22] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000919
+2026-03-23 00:03:22,241 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:22] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.002762
+2026-03-23 00:03:22,243 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:22] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000997
+2026-03-23 00:03:22,454 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:22] "GET /favicon.ico HTTP/1.1" 404 331 0.003989
+2026-03-23 00:03:28,983 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:28] "GET /static/left_open.png HTTP/1.1" 200 91170 0.002634
+2026-03-23 00:03:29,929 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:29] "GET /static/right_open.png HTTP/1.1" 200 100514 0.002558
+2026-03-23 00:03:30,602 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:30] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.002029
+2026-03-23 00:03:40,154 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:40] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.002033
+2026-03-23 00:03:46,587 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:46] "GET / HTTP/1.1" 200 103219 0.021516
+2026-03-23 00:03:46,605 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:46] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001996
+2026-03-23 00:03:46,610 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:46] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000996
+2026-03-23 00:03:49,734 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:49] "GET /static/right_open.png HTTP/1.1" 304 190 0.001062
+2026-03-23 00:03:50,169 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:50] "GET /static/left_open.png HTTP/1.1" 304 189 0.001519
+2026-03-23 00:03:51,856 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:51] "GET /static/left_winner.png HTTP/1.1" 304 192 0.001557
+2026-03-23 00:03:55,611 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:55] "GET /static/right_open.png HTTP/1.1" 304 190 0.001128
+2026-03-23 00:03:56,833 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:03:56] "GET /static/left_winner.png HTTP/1.1" 304 192 0.001470
+2026-03-23 00:04:00,829 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:04:00] "GET /static/right_winner.png HTTP/1.1" 304 193 0.001543
+2026-03-23 00:07:11,951 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:07:14,538 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:14] "GET / HTTP/1.1" 200 104043 0.020110
+2026-03-23 00:07:14,808 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:14] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.056591
+2026-03-23 00:07:14,811 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:14] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001590
+2026-03-23 00:07:16,795 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:16] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002614
+2026-03-23 00:07:16,798 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:16] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001994
+2026-03-23 00:07:16,800 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:16] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001427
+2026-03-23 00:07:16,802 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:16] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-23 00:07:16,804 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:16] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000995
+2026-03-23 00:07:16,808 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:16] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001995
+2026-03-23 00:07:16,810 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:16] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001535
+2026-03-23 00:07:17,497 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:17] "GET /favicon.ico HTTP/1.1" 404 331 0.008881
+2026-03-23 00:07:23,000 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:23] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.002030
+2026-03-23 00:07:31,782 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:31] "GET /static/right_open.png HTTP/1.1" 200 100514 0.002210
+2026-03-23 00:07:35,220 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:35] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001993
+2026-03-23 00:07:36,118 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:36] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.001648
+2026-03-23 00:07:49,067 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:49] "GET /static/left_winner.png HTTP/1.1" 304 192 0.001569
+2026-03-23 00:07:54,811 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:54] "GET / HTTP/1.1" 200 104043 0.019120
+2026-03-23 00:07:54,831 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:54] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001996
+2026-03-23 00:07:54,834 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:54] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000540
+2026-03-23 00:07:54,847 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:54] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002995
+2026-03-23 00:07:57,995 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:57] "GET /static/left_open.png HTTP/1.1" 304 189 0.001041
+2026-03-23 00:07:58,422 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:07:58] "GET /static/right_open.png HTTP/1.1" 304 190 0.000507
+2026-03-23 00:08:00,605 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:08:00] "GET /static/left_winner.png HTTP/1.1" 304 192 0.001572
+2026-03-23 00:09:52,644 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:09:54,735 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:54] "GET / HTTP/1.1" 200 103466 0.040119
+2026-03-23 00:09:55,106 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:55] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.054458
+2026-03-23 00:09:55,108 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:55] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.002283
+2026-03-23 00:09:55,693 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:55] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-23 00:09:55,697 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:55] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002378
+2026-03-23 00:09:55,711 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:55] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001995
+2026-03-23 00:09:55,712 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:55] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001014
+2026-03-23 00:09:55,715 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:55] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001422
+2026-03-23 00:09:55,717 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:55] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001994
+2026-03-23 00:09:55,718 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:55] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001526
+2026-03-23 00:09:56,048 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:09:56] "GET /favicon.ico HTTP/1.1" 404 331 0.006518
+2026-03-23 00:10:01,389 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:01] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001520
+2026-03-23 00:10:01,943 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:01] "GET /static/right_open.png HTTP/1.1" 200 100514 0.002025
+2026-03-23 00:10:03,616 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:03] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.002033
+2026-03-23 00:10:12,709 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:12] "GET / HTTP/1.1" 200 103466 0.020655
+2026-03-23 00:10:12,726 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:12] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001988
+2026-03-23 00:10:12,729 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:12] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000999
+2026-03-23 00:10:14,321 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:14] "GET /static/right_open.png HTTP/1.1" 304 190 0.001175
+2026-03-23 00:10:14,755 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:14] "GET /static/left_open.png HTTP/1.1" 304 189 0.001520
+2026-03-23 00:10:17,221 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:17] "GET /static/left_winner.png HTTP/1.1" 304 192 0.001517
+2026-03-23 00:10:18,961 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:18] "GET / HTTP/1.1" 200 103466 0.018997
+2026-03-23 00:10:18,977 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:18] "GET /static/left_closed.png HTTP/1.1" 304 191 0.003240
+2026-03-23 00:10:18,981 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:10:18] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001993
+2026-03-23 00:13:48,647 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:13:50,693 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:50] "GET / HTTP/1.1" 200 97197 0.025010
+2026-03-23 00:13:51,006 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:51] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.055880
+2026-03-23 00:13:51,010 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:51] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.002550
+2026-03-23 00:13:51,677 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:51] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001996
+2026-03-23 00:13:51,694 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:51] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000998
+2026-03-23 00:13:51,698 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:51] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001998
+2026-03-23 00:13:51,700 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:51] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001994
+2026-03-23 00:13:51,702 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:51] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000996
+2026-03-23 00:13:51,704 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:51] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000850
+2026-03-23 00:13:51,996 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:51] "GET /favicon.ico HTTP/1.1" 404 331 0.005867
+2026-03-23 00:13:59,192 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:13:59] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.001006
+2026-03-23 00:14:04,079 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:04] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001462
+2026-03-23 00:14:04,830 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:04] "GET /static/left_open.png HTTP/1.1" 200 91170 0.002115
+2026-03-23 00:14:06,165 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:06] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.002115
+2026-03-23 00:14:22,373 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:22] "GET /static/left_open.png HTTP/1.1" 304 189 0.001518
+2026-03-23 00:14:23,024 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:23] "GET /static/right_open.png HTTP/1.1" 304 190 0.001008
+2026-03-23 00:14:24,105 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:24] "GET /static/left_winner.png HTTP/1.1" 304 192 0.001069
+2026-03-23 00:14:27,560 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:27] "GET /static/left_open.png HTTP/1.1" 304 189 0.000506
+2026-03-23 00:14:29,497 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:29] "GET /static/left_winner.png HTTP/1.1" 304 192 0.001618
+2026-03-23 00:14:31,315 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:31] "GET / HTTP/1.1" 200 97197 0.019613
+2026-03-23 00:14:31,334 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:31] "GET /static/left_closed.png HTTP/1.1" 304 191 0.007286
+2026-03-23 00:14:31,341 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:31] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001995
+2026-03-23 00:14:31,354 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:31] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002991
+2026-03-23 00:14:31,361 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:31] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001777
+2026-03-23 00:14:31,367 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:31] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.003511
+2026-03-23 00:14:33,835 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:33] "GET /static/left_open.png HTTP/1.1" 304 189 0.001555
+2026-03-23 00:14:34,364 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:34] "GET /static/right_open.png HTTP/1.1" 304 190 0.001578
+2026-03-23 00:14:35,651 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:35] "GET /static/right_winner.png HTTP/1.1" 304 193 0.001523
+2026-03-23 00:14:39,825 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:39] "GET /static/left_winner.png HTTP/1.1" 304 192 0.001053
+2026-03-23 00:14:43,757 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:43] "GET / HTTP/1.1" 200 97197 0.016854
+2026-03-23 00:14:43,770 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:43] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000541
+2026-03-23 00:14:43,773 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:14:43] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001569
+2026-03-23 00:15:54,722 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:15:56,607 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:56] "GET / HTTP/1.1" 200 97309 0.049115
+2026-03-23 00:15:56,943 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:56] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.075648
+2026-03-23 00:15:56,946 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:56] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001515
+2026-03-23 00:15:57,560 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:57] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002504
+2026-03-23 00:15:57,563 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:57] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000000
+2026-03-23 00:15:57,571 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:57] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000777
+2026-03-23 00:15:57,573 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:57] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000996
+2026-03-23 00:15:57,576 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:57] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001561
+2026-03-23 00:15:57,602 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:57] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001961
+2026-03-23 00:15:57,608 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:57] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001095
+2026-03-23 00:15:57,888 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:15:57] "GET /favicon.ico HTTP/1.1" 404 331 0.004931
+2026-03-23 00:16:01,560 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:01] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.001995
+2026-03-23 00:16:05,621 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:05] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001994
+2026-03-23 00:16:07,744 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:07] "GET /static/left_open.png HTTP/1.1" 200 91170 0.002060
+2026-03-23 00:16:16,198 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:16] "GET / HTTP/1.1" 200 97309 0.019321
+2026-03-23 00:16:16,215 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:16] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001995
+2026-03-23 00:16:16,218 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:16] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001081
+2026-03-23 00:16:18,413 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:18] "GET /static/left_winner.png HTTP/1.1" 304 192 0.002225
+2026-03-23 00:16:20,741 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:20] "GET /static/left_open.png HTTP/1.1" 304 189 0.001009
+2026-03-23 00:16:21,446 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:21] "GET /static/right_open.png HTTP/1.1" 304 190 0.001035
+2026-03-23 00:16:31,384 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:31] "GET / HTTP/1.1" 200 97309 0.017271
+2026-03-23 00:16:31,396 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:31] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000000
+2026-03-23 00:16:31,406 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:16:31] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001656
+2026-03-23 00:18:27,411 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:18:28,957 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:28] "GET / HTTP/1.1" 200 105019 0.051999
+2026-03-23 00:18:29,082 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:29] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.074130
+2026-03-23 00:18:29,085 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:29] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001518
+2026-03-23 00:18:29,518 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:29] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002186
+2026-03-23 00:18:29,531 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:29] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001552
+2026-03-23 00:18:29,534 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:29] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001336
+2026-03-23 00:18:29,535 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:29] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001024
+2026-03-23 00:18:29,538 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:29] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001001
+2026-03-23 00:18:29,540 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:29] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001045
+2026-03-23 00:18:29,542 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:29] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001982
+2026-03-23 00:18:30,389 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:18:30] "GET /favicon.ico HTTP/1.1" 404 331 0.000000
+2026-03-23 00:20:45,017 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:45] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001515
+2026-03-23 00:20:46,861 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:46] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001120
+2026-03-23 00:20:50,050 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:50] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.002536
+2026-03-23 00:20:52,344 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:52] "GET / HTTP/1.1" 200 105019 0.020748
+2026-03-23 00:20:52,360 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:52] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001996
+2026-03-23 00:20:52,364 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:52] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000997
+2026-03-23 00:20:52,374 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:52] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001995
+2026-03-23 00:20:52,383 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:52] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001996
+2026-03-23 00:20:52,387 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:52] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002492
+2026-03-23 00:20:52,392 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:52] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001661
+2026-03-23 00:20:52,395 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:52] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000998
+2026-03-23 00:20:52,397 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:52] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001039
+2026-03-23 00:20:54,360 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:54] "GET /static/right_open.png HTTP/1.1" 304 190 0.002457
+2026-03-23 00:20:54,831 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:54] "GET /static/left_open.png HTTP/1.1" 304 189 0.001518
+2026-03-23 00:20:56,149 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:56] "GET / HTTP/1.1" 200 105019 0.018086
+2026-03-23 00:20:56,161 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:56] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001539
+2026-03-23 00:20:56,163 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:20:56] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000997
+2026-03-23 00:22:04,628 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:22:06,227 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:06] "GET / HTTP/1.1" 200 105041 0.019970
+2026-03-23 00:22:06,716 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:06] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.101913
+2026-03-23 00:22:06,721 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:06] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.002644
+2026-03-23 00:22:07,034 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:07] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001172
+2026-03-23 00:22:07,040 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:07] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000343
+2026-03-23 00:22:07,055 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:07] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002992
+2026-03-23 00:22:07,059 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:07] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-23 00:22:07,064 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:07] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-23 00:22:07,066 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:07] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001543
+2026-03-23 00:22:07,398 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:07] "GET /favicon.ico HTTP/1.1" 404 331 0.004924
+2026-03-23 00:22:27,869 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:27] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001106
+2026-03-23 00:22:29,067 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:29] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001583
+2026-03-23 00:22:34,523 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:34] "GET / HTTP/1.1" 200 105041 0.018247
+2026-03-23 00:22:34,536 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:34] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001519
+2026-03-23 00:22:34,539 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:34] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001428
+2026-03-23 00:22:37,096 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:37] "GET /static/right_open.png HTTP/1.1" 304 190 0.001522
+2026-03-23 00:22:37,547 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:37] "GET /static/left_open.png HTTP/1.1" 304 189 0.001076
+2026-03-23 00:22:39,252 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET / HTTP/1.1" 200 105041 0.017752
+2026-03-23 00:22:39,264 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001991
+2026-03-23 00:22:39,267 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001819
+2026-03-23 00:22:39,273 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001922
+2026-03-23 00:22:39,276 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001530
+2026-03-23 00:22:39,280 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001565
+2026-03-23 00:22:39,284 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001034
+2026-03-23 00:22:39,286 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000997
+2026-03-23 00:22:39,290 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001996
+2026-03-23 00:22:39,292 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:22:39] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001027
+2026-03-23 00:23:39,660 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:23:41,033 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET / HTTP/1.1" 200 105690 0.024832
+2026-03-23 00:23:41,106 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.054673
+2026-03-23 00:23:41,109 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.002202
+2026-03-23 00:23:41,936 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001951
+2026-03-23 00:23:41,942 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002237
+2026-03-23 00:23:41,949 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000998
+2026-03-23 00:23:41,956 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001995
+2026-03-23 00:23:41,958 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000994
+2026-03-23 00:23:41,963 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-23 00:23:41,965 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:41] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-23 00:23:42,329 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:23:42] "GET /favicon.ico HTTP/1.1" 404 331 0.005843
+2026-03-23 00:24:00,931 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:24:00] "GET /static/left_open.png HTTP/1.1" 200 91170 0.002788
+2026-03-23 00:24:02,031 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:24:02] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001652
+2026-03-23 00:24:02,843 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:24:02] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.000000
+2026-03-23 00:24:04,655 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:24:04] "GET / HTTP/1.1" 200 105690 0.019086
+2026-03-23 00:24:04,671 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:24:04] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001540
+2026-03-23 00:24:04,674 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:24:04] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000947
+2026-03-23 00:24:08,747 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:24:08] "GET /static/right_open.png HTTP/1.1" 304 190 0.001121
+2026-03-23 00:24:09,146 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:24:09] "GET /static/left_open.png HTTP/1.1" 304 189 0.001471
+2026-03-23 00:24:10,389 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:24:10] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.001585
+2026-03-23 00:25:43,742 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:25:45,325 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:45] "GET / HTTP/1.1" 200 97309 0.021356
+2026-03-23 00:25:45,672 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:45] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.122380
+2026-03-23 00:25:45,678 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:45] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.002085
+2026-03-23 00:25:46,046 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:46] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001995
+2026-03-23 00:25:46,054 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:46] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000000
+2026-03-23 00:25:46,066 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:46] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002202
+2026-03-23 00:25:46,074 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:46] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-23 00:25:46,076 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:46] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-23 00:25:46,081 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:46] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001292
+2026-03-23 00:25:46,084 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:46] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001995
+2026-03-23 00:25:46,404 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:46] "GET /favicon.ico HTTP/1.1" 404 331 0.001035
+2026-03-23 00:25:51,241 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:51] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001372
+2026-03-23 00:25:53,953 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:53] "GET /static/right_open.png HTTP/1.1" 200 100514 0.002026
+2026-03-23 00:25:56,232 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:56] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.001519
+2026-03-23 00:25:58,617 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:58] "GET / HTTP/1.1" 200 97309 0.019965
+2026-03-23 00:25:58,636 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:58] "GET /static/left_closed.png HTTP/1.1" 304 191 0.002391
+2026-03-23 00:25:58,640 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:25:58] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000998
+2026-03-23 00:26:05,647 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:05] "GET /static/left_open.png HTTP/1.1" 304 189 0.001780
+2026-03-23 00:26:06,495 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:06] "GET /static/right_open.png HTTP/1.1" 304 190 0.001016
+2026-03-23 00:26:08,116 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:08] "GET /static/right_winner.png HTTP/1.1" 304 193 0.001525
+2026-03-23 00:26:10,032 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:10] "GET / HTTP/1.1" 200 97309 0.019251
+2026-03-23 00:26:10,050 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:10] "GET /static/left_closed.png HTTP/1.1" 304 191 0.002694
+2026-03-23 00:26:10,054 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:10] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001505
+2026-03-23 00:26:12,875 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:12] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.001517
+2026-03-23 00:26:15,058 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:15] "GET /static/right_open.png HTTP/1.1" 304 190 0.001526
+2026-03-23 00:26:15,393 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:15] "GET /static/left_open.png HTTP/1.1" 304 189 0.001014
+2026-03-23 00:26:16,489 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:16] "GET /static/right_winner.png HTTP/1.1" 304 193 0.001050
+2026-03-23 00:26:16,507 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:16] "GET /sounds/2.mp3 HTTP/1.1" 206 14860 0.001585
+2026-03-23 00:26:19,884 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:19] "GET / HTTP/1.1" 200 97309 0.018309
+2026-03-23 00:26:19,901 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:19] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001048
+2026-03-23 00:26:19,909 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:19] "GET /static/right_closed.png HTTP/1.1" 304 193 0.002730
+2026-03-23 00:26:19,920 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:26:19] "GET /sounds/2.mp3 HTTP/1.1" 206 33099 0.003678
+2026-03-23 00:29:24,705 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:29:26,409 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:26] "GET / HTTP/1.1" 200 103304 0.040952
+2026-03-23 00:29:26,599 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:26] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.057448
+2026-03-23 00:29:26,602 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:26] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.002150
+2026-03-23 00:29:27,068 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:27] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000997
+2026-03-23 00:29:27,074 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:27] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002079
+2026-03-23 00:29:27,079 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:27] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001255
+2026-03-23 00:29:27,088 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:27] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.000996
+2026-03-23 00:29:27,091 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:27] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001503
+2026-03-23 00:29:27,096 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:27] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000997
+2026-03-23 00:29:27,099 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:27] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002504
+2026-03-23 00:29:27,468 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:29:27] "GET /favicon.ico HTTP/1.1" 404 331 0.005527
+2026-03-23 00:31:25,267 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:31:26,629 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:26] "GET / HTTP/1.1" 200 103682 0.022454
+2026-03-23 00:31:26,931 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:26] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.089716
+2026-03-23 00:31:26,936 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:26] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001977
+2026-03-23 00:31:27,595 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /socket.io/?EIO=4&transport=polling&t=PqNTSMz HTTP/1.1" 200 276 0.043292
+2026-03-23 00:31:27,600 - MohibisGame - INFO - Player connected: Fnv-5QQrX3ZV-9KxAAAB
+2026-03-23 00:31:27,601 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "POST /socket.io/?EIO=4&transport=polling&t=PqNTSNj&sid=B0NMrjijm8Um4wuiAAAA HTTP/1.1" 200 195 0.000997
+2026-03-23 00:31:27,605 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001513
+2026-03-23 00:31:27,608 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001994
+2026-03-23 00:31:27,611 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002017
+2026-03-23 00:31:27,614 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /socket.io/?EIO=4&transport=polling&t=PqNTSNk&sid=B0NMrjijm8Um4wuiAAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 00:31:27,617 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000507
+2026-03-23 00:31:27,619 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001514
+2026-03-23 00:31:27,622 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001423
+2026-03-23 00:31:27,624 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002183
+2026-03-23 00:31:27,627 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:27] "GET /socket.io/?EIO=4&transport=polling&t=PqNTSN_&sid=B0NMrjijm8Um4wuiAAAA HTTP/1.1" 200 157 0.000997
+2026-03-23 00:31:27,632 - MohibisGame - INFO - join_game event received with data: {'nickname': 'ضيف'}
+2026-03-23 00:31:28,296 - MohibisGame - INFO - New player created: ضيف
+2026-03-23 00:31:28,299 - MohibisGame - INFO - Player joined: ضيف
+2026-03-23 00:31:28,300 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:31:28] "GET /favicon.ico HTTP/1.1" 404 331 0.001005
+2026-03-23 00:32:06,709 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:06,730 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:06] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001518
+2026-03-23 00:32:06,789 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:06] "GET /sounds/1.mp3 HTTP/1.1" 206 11516 0.002299
+2026-03-23 00:32:08,320 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:08,323 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:08] "GET /static/right_open.png HTTP/1.1" 200 100514 0.002025
+2026-03-23 00:32:08,337 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:08] "GET /sounds/1.mp3 HTTP/1.1" 206 33099 0.014321
+2026-03-23 00:32:08,821 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:09,490 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:09,929 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:10,372 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:10,815 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:10,832 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:10] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.003015
+2026-03-23 00:32:10,889 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:10] "GET /sounds/3.mp3 HTTP/1.1" 206 9843 0.041291
+2026-03-23 00:32:13,484 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET / HTTP/1.1" 200 103682 0.022695
+2026-03-23 00:32:13,505 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001994
+2026-03-23 00:32:13,511 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET /static/right_closed.png HTTP/1.1" 304 193 0.002994
+2026-03-23 00:32:13,516 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET /socket.io/?EIO=4&transport=polling&t=PqNTdb7 HTTP/1.1" 200 276 0.000996
+2026-03-23 00:32:13,527 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.003315
+2026-03-23 00:32:13,541 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002996
+2026-03-23 00:32:13,548 - MohibisGame - INFO - Player connected: x3nsPtwFkPEmggQaAAAD
+2026-03-23 00:32:13,549 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "POST /socket.io/?EIO=4&transport=polling&t=PqNTdbL&sid=ZSjyQaO2gHIft37eAAAC HTTP/1.1" 200 195 0.000997
+2026-03-23 00:32:13,554 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001995
+2026-03-23 00:32:13,563 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET /socket.io/?EIO=4&transport=polling&t=PqNTdbM&sid=ZSjyQaO2gHIft37eAAAC HTTP/1.1" 200 356 0.026111
+2026-03-23 00:32:13,567 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET /socket.io/?EIO=4&transport=polling&t=PqNTdbz&sid=ZSjyQaO2gHIft37eAAAC HTTP/1.1" 200 157 0.000000
+2026-03-23 00:32:13,571 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "POST /socket.io/?EIO=4&transport=polling&t=PqNTdbz.0&sid=ZSjyQaO2gHIft37eAAAC HTTP/1.1" 200 195 0.000000
+2026-03-23 00:32:13,573 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:13] "GET /socket.io/?EIO=4&transport=polling&t=PqNTdc1&sid=ZSjyQaO2gHIft37eAAAC HTTP/1.1" 200 157 0.000000
+2026-03-23 00:32:13,578 - MohibisGame - INFO - join_game event received with data: {'nickname': 'ضيف'}
+2026-03-23 00:32:13,769 - MohibisGame - INFO - Player joined: ضيف
+2026-03-23 00:32:28,281 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:28] "GET /static/right_open.png HTTP/1.1" 304 190 0.003046
+2026-03-23 00:32:28,721 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:28] "GET /static/left_open.png HTTP/1.1" 304 189 0.001995
+2026-03-23 00:32:29,742 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:30,042 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:30] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.009110
+2026-03-23 00:32:32,199 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:32] "GET /static/right_winner.png HTTP/1.1" 304 193 0.001015
+2026-03-23 00:32:32,318 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:35,801 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:39,673 - MohibisGame - INFO - Stats updated for player 1
+2026-03-23 00:32:39,675 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:39] "GET /static/left_winner.png HTTP/1.1" 304 192 0.000512
+2026-03-23 00:32:41,728 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "GET / HTTP/1.1" 200 103682 0.020842
+2026-03-23 00:32:41,742 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000000
+2026-03-23 00:32:41,747 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001260
+2026-03-23 00:32:41,750 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "GET /socket.io/?EIO=4&transport=polling&t=PqNTkUK HTTP/1.1" 200 276 0.000000
+2026-03-23 00:32:41,762 - MohibisGame - INFO - Player connected: O1LCFNrP6jc6pLYVAAAF
+2026-03-23 00:32:41,767 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "POST /socket.io/?EIO=4&transport=polling&t=PqNTkUV&sid=H8jzV73E0DAWhvTaAAAE HTTP/1.1" 200 195 0.005984
+2026-03-23 00:32:41,772 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "GET /socket.io/?EIO=4&transport=polling&t=PqNTkUY&sid=H8jzV73E0DAWhvTaAAAE HTTP/1.1" 200 356 0.000000
+2026-03-23 00:32:41,777 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "GET /socket.io/?EIO=4&transport=polling&t=PqNTkUm&sid=H8jzV73E0DAWhvTaAAAE HTTP/1.1" 200 157 0.000000
+2026-03-23 00:32:41,779 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "POST /socket.io/?EIO=4&transport=polling&t=PqNTkUn&sid=H8jzV73E0DAWhvTaAAAE HTTP/1.1" 200 195 0.000890
+2026-03-23 00:32:41,781 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "GET /socket.io/?EIO=4&transport=polling&t=PqNTkUq&sid=H8jzV73E0DAWhvTaAAAE HTTP/1.1" 200 157 0.000000
+2026-03-23 00:32:41,784 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:41] "GET /socket.io/?EIO=4&transport=polling&t=PqNTkUt&sid=H8jzV73E0DAWhvTaAAAE HTTP/1.1" 200 157 0.000000
+2026-03-23 00:32:41,789 - MohibisGame - INFO - join_game event received with data: {'nickname': 'ضيف'}
+2026-03-23 00:32:41,989 - MohibisGame - INFO - Player joined: ضيف
+2026-03-23 00:32:56,298 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:32:57,901 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:57] "GET / HTTP/1.1" 200 103282 0.034436
+2026-03-23 00:32:58,023 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.057621
+2026-03-23 00:32:58,025 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001519
+2026-03-23 00:32:58,365 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /socket.io/?EIO=4&transport=polling&t=PqNToXx HTTP/1.1" 200 276 0.001027
+2026-03-23 00:32:58,461 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001994
+2026-03-23 00:32:58,478 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001505
+2026-03-23 00:32:58,481 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002503
+2026-03-23 00:32:58,491 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000998
+2026-03-23 00:32:58,500 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001392
+2026-03-23 00:32:58,502 - MohibisGame - INFO - Player connected: YgASolUhEbCy1SyGAAAB
+2026-03-23 00:32:58,503 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "POST /socket.io/?EIO=4&transport=polling&t=PqNToZU&sid=eBoYPCVTCAarFVmPAAAA HTTP/1.1" 200 195 0.001995
+2026-03-23 00:32:58,505 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /socket.io/?EIO=4&transport=polling&t=PqNToZV&sid=eBoYPCVTCAarFVmPAAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 00:32:58,508 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000859
+2026-03-23 00:32:58,510 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001503
+2026-03-23 00:32:58,511 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:58] "GET /socket.io/?EIO=4&transport=polling&t=PqNToaA&sid=eBoYPCVTCAarFVmPAAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 00:32:59,140 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:32:59] "GET /favicon.ico HTTP/1.1" 404 331 0.001518
+2026-03-23 00:33:09,909 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:09,914 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:09] "GET /static/left_open.png HTTP/1.1" 200 91170 0.000000
+2026-03-23 00:33:10,956 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:10,959 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:10] "GET /static/right_open.png HTTP/1.1" 200 100514 0.003018
+2026-03-23 00:33:11,573 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:12,114 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:12,127 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:12] "GET /static/right_winner.png HTTP/1.1" 200 108249 0.008977
+2026-03-23 00:33:13,982 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:13] "GET / HTTP/1.1" 200 103282 0.019748
+2026-03-23 00:33:14,000 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:14] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001994
+2026-03-23 00:33:14,003 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:14] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000997
+2026-03-23 00:33:14,007 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:14] "GET /socket.io/?EIO=4&transport=polling&t=PqNTsML HTTP/1.1" 200 276 0.000000
+2026-03-23 00:33:14,017 - MohibisGame - INFO - Player connected: ZNPFeSIZ2pGWzXHRAAAD
+2026-03-23 00:33:14,027 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:14] "POST /socket.io/?EIO=4&transport=polling&t=PqNTsMW&sid=R4C6rTGvX0yTJPgxAAAC HTTP/1.1" 200 195 0.010153
+2026-03-23 00:33:14,029 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:14] "GET /socket.io/?EIO=4&transport=polling&t=PqNTsMW.0&sid=R4C6rTGvX0yTJPgxAAAC HTTP/1.1" 200 356 0.000000
+2026-03-23 00:33:14,035 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:14] "GET /socket.io/?EIO=4&transport=polling&t=PqNTsMn&sid=R4C6rTGvX0yTJPgxAAAC HTTP/1.1" 200 157 0.000000
+2026-03-23 00:33:25,156 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:25] "GET /static/left_open.png HTTP/1.1" 304 189 0.000507
+2026-03-23 00:33:25,877 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:25] "GET /static/right_open.png HTTP/1.1" 304 190 0.001516
+2026-03-23 00:33:27,128 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:27,135 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:27] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.004301
+2026-03-23 00:33:29,532 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:29] "GET /static/right_open.png HTTP/1.1" 304 190 0.002870
+2026-03-23 00:33:29,970 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:29] "GET /static/left_open.png HTTP/1.1" 304 189 0.001009
+2026-03-23 00:33:30,479 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:30,492 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:30] "GET /static/left_winner.png HTTP/1.1" 304 192 0.001265
+2026-03-23 00:33:32,653 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:32,667 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:32] "GET /static/right_winner.png HTTP/1.1" 304 193 0.006922
+2026-03-23 00:33:35,630 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:35] "GET /static/right_open.png HTTP/1.1" 304 190 0.001008
+2026-03-23 00:33:36,148 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:36,151 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:36] "GET /static/left_winner.png HTTP/1.1" 304 192 0.003067
+2026-03-23 00:33:43,774 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:45,780 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:45] "GET /static/left_open.png HTTP/1.1" 304 189 0.001531
+2026-03-23 00:33:46,208 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:46] "GET /static/right_open.png HTTP/1.1" 304 190 0.001011
+2026-03-23 00:33:47,233 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:47,235 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:47] "GET /static/right_winner.png HTTP/1.1" 304 193 0.002551
+2026-03-23 00:33:51,247 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:55,717 - MohibisGame - INFO - Stats updated for player 2
+2026-03-23 00:33:55,725 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:55] "GET /static/left_winner.png HTTP/1.1" 304 192 0.002016
+2026-03-23 00:33:55,730 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:55] "GET /sounds/2.mp3 HTTP/1.1" 206 14860 0.005006
+2026-03-23 00:33:57,702 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:57] "GET / HTTP/1.1" 200 103282 0.019939
+2026-03-23 00:33:57,720 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:57] "GET /static/left_closed.png HTTP/1.1" 304 191 0.002027
+2026-03-23 00:33:57,728 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:57] "GET /static/right_closed.png HTTP/1.1" 304 193 0.003948
+2026-03-23 00:33:57,731 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:57] "GET /socket.io/?EIO=4&transport=polling&t=PqNU11W HTTP/1.1" 200 276 0.000000
+2026-03-23 00:33:57,739 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:57] "GET /sounds/2.mp3 HTTP/1.1" 206 33099 0.002390
+2026-03-23 00:33:57,742 - MohibisGame - INFO - Player connected: Y5J_Ux-P3dHGuCroAAAF
+2026-03-23 00:33:57,751 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:57] "POST /socket.io/?EIO=4&transport=polling&t=PqNU11i&sid=oTpFLXZFjtQwyQ-9AAAE HTTP/1.1" 200 195 0.009912
+2026-03-23 00:33:57,753 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:57] "GET /socket.io/?EIO=4&transport=polling&t=PqNU11k&sid=oTpFLXZFjtQwyQ-9AAAE HTTP/1.1" 200 356 0.000000
+2026-03-23 00:33:57,760 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:57] "GET /socket.io/?EIO=4&transport=polling&t=PqNU11-&sid=oTpFLXZFjtQwyQ-9AAAE HTTP/1.1" 200 157 0.000000
+2026-03-23 00:33:57,761 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:33:57] "GET /socket.io/?EIO=4&transport=polling&t=PqNU121&sid=oTpFLXZFjtQwyQ-9AAAE HTTP/1.1" 200 157 0.000000
+2026-03-23 00:41:12,189 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:41:13,871 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:13] "GET / HTTP/1.1" 200 105588 0.069546
+2026-03-23 00:41:13,941 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:13] "GET /static/default_avatar.png HTTP/1.1" 404 331 0.008955
+2026-03-23 00:41:14,024 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.080185
+2026-03-23 00:41:14,027 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.001506
+2026-03-23 00:41:14,521 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /static/default_avatar.png HTTP/1.1" 404 331 0.000503
+2026-03-23 00:41:14,526 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001521
+2026-03-23 00:41:14,529 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001518
+2026-03-23 00:41:14,532 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001788
+2026-03-23 00:41:14,535 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001996
+2026-03-23 00:41:14,537 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000975
+2026-03-23 00:41:14,539 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001317
+2026-03-23 00:41:14,541 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-23 00:41:14,968 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:14] "GET /socket.io/?EIO=4&transport=polling&t=PqNVhnM HTTP/1.1" 200 276 0.000998
+2026-03-23 00:41:14,994 - MohibisGame - INFO - Player connected: uYnTeQiEAnI4SCHnAAAB
+2026-03-23 00:41:15,003 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:15] "POST /socket.io/?EIO=4&transport=polling&t=PqNVhnm&sid=sh5aOEreJZ_kt4J1AAAA HTTP/1.1" 200 195 0.009717
+2026-03-23 00:41:15,005 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:15] "GET /socket.io/?EIO=4&transport=polling&t=PqNVhnn&sid=sh5aOEreJZ_kt4J1AAAA HTTP/1.1" 200 356 0.000296
+2026-03-23 00:41:15,008 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:15] "GET /socket.io/?EIO=4&transport=polling&t=PqNVhn-&sid=sh5aOEreJZ_kt4J1AAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 00:41:15,646 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:41:15] "GET /favicon.ico HTTP/1.1" 404 331 0.001012
+2026-03-23 00:41:26,110 - MohibisGame - ERROR - Error in handle_login: 'NoneType' object has no attribute 'split'
+2026-03-23 00:41:29,767 - MohibisGame - ERROR - Error in handle_login: 'NoneType' object has no attribute 'split'
+2026-03-23 00:41:58,526 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:42:00,129 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:00] "GET / HTTP/1.1" 200 105729 0.021636
+2026-03-23 00:42:05,563 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:05] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.072157
+2026-03-23 00:42:05,567 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:05] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.002280
+2026-03-23 00:42:06,054 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /socket.io/?EIO=4&transport=polling&t=PqNVuFa HTTP/1.1" 200 276 0.000998
+2026-03-23 00:42:06,087 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002993
+2026-03-23 00:42:06,098 - MohibisGame - INFO - Player connected: Ag8tJErpf5Ic0Wh8AAAB
+2026-03-23 00:42:06,098 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "POST /socket.io/?EIO=4&transport=polling&t=PqNVuG6&sid=c9slKJR82dwmQThuAAAA HTTP/1.1" 200 195 0.000999
+2026-03-23 00:42:06,100 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000535
+2026-03-23 00:42:06,104 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001551
+2026-03-23 00:42:06,107 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001995
+2026-03-23 00:42:06,109 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001995
+2026-03-23 00:42:06,112 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /socket.io/?EIO=4&transport=polling&t=PqNVuG7&sid=c9slKJR82dwmQThuAAAA HTTP/1.1" 200 157 0.000997
+2026-03-23 00:42:06,115 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000999
+2026-03-23 00:42:06,117 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-23 00:42:06,119 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /socket.io/?EIO=4&transport=polling&t=PqNVuGX&sid=c9slKJR82dwmQThuAAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 00:42:06,479 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:42:06] "GET /favicon.ico HTTP/1.1" 404 331 0.002374
+2026-03-23 00:42:50,007 - MohibisGame - ERROR - Error in handle_login: 'NoneType' object has no attribute 'split'
+2026-03-23 00:43:21,216 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:43:21,218 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:21] "GET /static/left_open.png HTTP/1.1" 200 91170 0.001515
+2026-03-23 00:43:21,235 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:21] "GET /sounds/1.mp3 HTTP/1.1" 206 11516 0.000000
+2026-03-23 00:43:22,404 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:43:22,409 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:22] "GET /static/right_open.png HTTP/1.1" 200 100514 0.001684
+2026-03-23 00:43:22,417 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:22] "GET /sounds/1.mp3 HTTP/1.1" 206 33099 0.001013
+2026-03-23 00:43:22,921 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:43:23,417 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:43:23,944 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:43:24,545 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:43:24,979 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:43:24,994 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:24] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.004669
+2026-03-23 00:43:24,999 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:24] "GET /sounds/3.mp3 HTTP/1.1" 206 9843 0.002023
+2026-03-23 00:43:26,874 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET / HTTP/1.1" 200 105729 0.021543
+2026-03-23 00:43:26,901 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET /static/left_closed.png HTTP/1.1" 304 191 0.003289
+2026-03-23 00:43:26,905 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001994
+2026-03-23 00:43:26,909 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET /socket.io/?EIO=4&transport=polling&t=PqNWB-w HTTP/1.1" 200 276 0.000000
+2026-03-23 00:43:26,918 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.003885
+2026-03-23 00:43:26,932 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002992
+2026-03-23 00:43:26,936 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002013
+2026-03-23 00:43:26,938 - MohibisGame - INFO - Player connected: 0oj5n99n1sOnG_i7AAAD
+2026-03-23 00:43:26,939 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "POST /socket.io/?EIO=4&transport=polling&t=PqNWB_6&sid=N1h1l7qU-kF6enH6AAAC HTTP/1.1" 200 195 0.002351
+2026-03-23 00:43:26,945 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET /socket.io/?EIO=4&transport=polling&t=PqNWB_7&sid=N1h1l7qU-kF6enH6AAAC HTTP/1.1" 200 356 0.002132
+2026-03-23 00:43:26,948 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET /socket.io/?EIO=4&transport=polling&t=PqNWB_Y&sid=N1h1l7qU-kF6enH6AAAC HTTP/1.1" 200 157 0.000000
+2026-03-23 00:43:26,951 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:43:26] "GET /socket.io/?EIO=4&transport=polling&t=PqNWB_c&sid=N1h1l7qU-kF6enH6AAAC HTTP/1.1" 200 157 0.000000
+2026-03-23 00:45:28,078 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:45:29,642 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:29] "GET / HTTP/1.1" 200 105994 0.020888
+2026-03-23 00:45:29,786 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:29] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.055086
+2026-03-23 00:45:29,900 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:29] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.007323
+2026-03-23 00:45:30,565 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:30] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000000
+2026-03-23 00:45:30,571 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:30] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001720
+2026-03-23 00:45:30,573 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:30] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001531
+2026-03-23 00:45:30,575 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:30] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001472
+2026-03-23 00:45:30,578 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:30] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001534
+2026-03-23 00:45:30,580 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:30] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.001616
+2026-03-23 00:45:30,582 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:30] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001611
+2026-03-23 00:45:36,931 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:36] "GET /socket.io/?EIO=4&transport=polling&t=PqNWhkX HTTP/1.1" 200 276 0.000000
+2026-03-23 00:45:36,957 - MohibisGame - INFO - Player connected: st1FLTZ8Tg-aQ0bFAAAB
+2026-03-23 00:45:36,958 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:36] "POST /socket.io/?EIO=4&transport=polling&t=PqNWhky&sid=qHM9J-ylWKFTHvQJAAAA HTTP/1.1" 200 195 0.000997
+2026-03-23 00:45:36,961 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:36] "GET /socket.io/?EIO=4&transport=polling&t=PqNWhkz&sid=qHM9J-ylWKFTHvQJAAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 00:45:36,966 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:36] "GET /socket.io/?EIO=4&transport=polling&t=PqNWhl5&sid=qHM9J-ylWKFTHvQJAAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 00:45:37,252 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:37] "GET /favicon.ico HTTP/1.1" 404 331 0.008111
+2026-03-23 00:45:54,006 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:45:54,021 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:45:54] "GET /static/left_open.png HTTP/1.1" 200 91170 0.006711
+2026-03-23 00:51:01,894 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 00:51:03,525 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:03] "GET / HTTP/1.1" 200 112253 0.022868
+2026-03-23 00:51:03,736 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:03] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.078324
+2026-03-23 00:51:04,154 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000000
+2026-03-23 00:51:04,247 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /socket.io/?EIO=4&transport=polling&t=PqNXxer HTTP/1.1" 200 276 0.000000
+2026-03-23 00:51:04,277 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001995
+2026-03-23 00:51:04,325 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.005984
+2026-03-23 00:51:04,340 - MohibisGame - INFO - Player connected: RRrrJ9YwlGKmR7bvAAAB
+2026-03-23 00:51:04,351 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "POST /socket.io/?EIO=4&transport=polling&t=PqNXxfN&sid=jCDqCwW3cJ2vEZEgAAAA HTTP/1.1" 200 195 0.017379
+2026-03-23 00:51:04,357 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /socket.io/?EIO=4&transport=polling&t=PqNXxfO&sid=jCDqCwW3cJ2vEZEgAAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 00:51:04,360 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001965
+2026-03-23 00:51:04,364 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.002531
+2026-03-23 00:51:04,366 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /sounds/2.mp3 HTTP/1.1" 206 4094 0.000996
+2026-03-23 00:51:04,411 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.006981
+2026-03-23 00:51:04,434 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /socket.io/?EIO=4&transport=polling&t=PqNXxhR&sid=jCDqCwW3cJ2vEZEgAAAA HTTP/1.1" 200 157 0.000997
+2026-03-23 00:51:04,443 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.003990
+2026-03-23 00:51:04,452 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /socket.io/?EIO=4&transport=polling&t=PqNXxh-&sid=jCDqCwW3cJ2vEZEgAAAA HTTP/1.1" 200 157 0.000509
+2026-03-23 00:51:04,456 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /socket.io/?EIO=4&transport=polling&t=PqNXxi5&sid=jCDqCwW3cJ2vEZEgAAAA HTTP/1.1" 200 157 0.000459
+2026-03-23 00:51:04,459 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /socket.io/?EIO=4&transport=polling&t=PqNXxi9&sid=jCDqCwW3cJ2vEZEgAAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 00:51:04,660 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:04] "GET /favicon.ico HTTP/1.1" 404 331 0.001994
+2026-03-23 00:51:31,808 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:51:31,814 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:31] "GET /static/left_open.png HTTP/1.1" 200 91170 0.000000
+2026-03-23 00:51:32,676 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:51:32,685 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:32] "GET /static/right_open.png HTTP/1.1" 200 100514 0.004561
+2026-03-23 00:51:33,224 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:51:33,234 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 00:51:33] "GET /static/left_winner.png HTTP/1.1" 200 108443 0.005984
+2026-03-23 00:52:12,196 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:52:12,729 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 00:52:13,116 - MohibisGame - INFO - Stats updated for player 3
+2026-03-23 01:01:34,429 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 01:01:34,433 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 01:01:34,434 - MohibisGame - INFO - Server starting on http://192.168.0.188:5000
+2026-03-23 01:01:39,551 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:39] "GET / HTTP/1.1" 200 112680 0.022488
+2026-03-23 01:01:40,599 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:40] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.052443
+2026-03-23 01:01:41,065 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.000000
+2026-03-23 01:01:41,263 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /socket.io/?EIO=4&transport=polling&t=PqNaNAE HTTP/1.1" 200 276 0.000000
+2026-03-23 01:01:41,311 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.014776
+2026-03-23 01:01:41,314 - MohibisGame - INFO - Player connected: WzgQETz7-vZ-hdP2AAAB
+2026-03-23 01:01:41,315 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "POST /socket.io/?EIO=4&transport=polling&t=PqNaNAn&sid=yXy_WHyTs5aIiRlvAAAA HTTP/1.1" 200 199 0.000997
+2026-03-23 01:01:41,321 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.002992
+2026-03-23 01:01:41,326 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002503
+2026-03-23 01:01:41,330 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /sounds/1.mp3 HTTP/1.1" 206 4094 0.001995
+2026-03-23 01:01:41,334 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /socket.io/?EIO=4&transport=polling&t=PqNaNAp&sid=yXy_WHyTs5aIiRlvAAAA HTTP/1.1" 200 157 0.000111
+2026-03-23 01:01:41,339 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /sounds/2.mp3 HTTP/1.1" 206 41291 0.001994
+2026-03-23 01:01:41,343 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001505
+2026-03-23 01:01:41,344 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /socket.io/?EIO=4&transport=polling&t=PqNaNBN&sid=yXy_WHyTs5aIiRlvAAAA HTTP/1.1" 200 157 0.000000
+2026-03-23 01:01:41,346 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:41] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000996
+2026-03-23 01:01:45,011 - geventwebsocket.handler - INFO - 192.168.0.188 - - [2026-03-23 01:01:45] "GET /favicon.ico HTTP/1.1" 404 331 0.016779
+2026-03-23 01:02:43,968 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:43] "GET / HTTP/1.1" 200 112680 0.042362
+2026-03-23 01:02:44,055 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.030541
+2026-03-23 01:02:44,393 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.008059
+2026-03-23 01:02:44,476 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /socket.io/?EIO=4&transport=polling&t=PqNacTH HTTP/1.1" 200 276 0.001536
+2026-03-23 01:02:44,508 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.008865
+2026-03-23 01:02:44,521 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.009106
+2026-03-23 01:02:44,525 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002511
+2026-03-23 01:02:44,539 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /sounds/1.mp3 HTTP/1.1" 206 14363 0.001503
+2026-03-23 01:02:44,542 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /sounds/2.mp3 HTTP/1.1" 206 30423 0.002345
+2026-03-23 01:02:44,543 - MohibisGame - INFO - Player connected: WOKoRDz7kqgrbycVAAAD
+2026-03-23 01:02:44,544 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "POST /socket.io/?EIO=4&transport=polling&t=PqNacUD&sid=33e0X-N38rXfreRmAAAC HTTP/1.1" 200 199 0.001550
+2026-03-23 01:02:44,555 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /socket.io/?EIO=4&transport=polling&t=PqNacUG&sid=33e0X-N38rXfreRmAAAC HTTP/1.1" 200 530 0.000000
+2026-03-23 01:02:44,557 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-23 01:02:44,561 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001949
+2026-03-23 01:02:44,777 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:02:44] "GET /favicon.ico HTTP/1.1" 404 331 0.000697
+2026-03-23 01:04:01,036 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:04:01] "GET /sounds/1.mp3 HTTP/1.1" 206 11516 0.003565
+2026-03-23 01:04:01,041 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:04:01] "GET /static/right_open.png HTTP/1.1" 200 100514 0.022254
+2026-03-23 01:05:35,895 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:35] "GET / HTTP/1.1" 200 112680 0.016722
+2026-03-23 01:05:36,021 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /static/left_closed.png HTTP/1.1" 304 191 0.003582
+2026-03-23 01:05:36,032 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /static/right_closed.png HTTP/1.1" 304 193 0.003654
+2026-03-23 01:05:36,040 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /socket.io/?EIO=4&transport=polling&t=PqNbGL- HTTP/1.1" 200 276 0.001380
+2026-03-23 01:05:36,063 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.005575
+2026-03-23 01:05:36,071 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /sounds/1.mp3 HTTP/1.1" 206 33099 0.003579
+2026-03-23 01:05:36,088 - MohibisGame - INFO - Player connected: OzzToeTT1wSsfZ9jAAAF
+2026-03-23 01:05:36,091 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "POST /socket.io/?EIO=4&transport=polling&t=PqNbGMJ&sid=mtwtilGDApr3_Cf8AAAE HTTP/1.1" 200 199 0.002945
+2026-03-23 01:05:36,138 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /socket.io/?EIO=4&transport=polling&t=PqNbGMK&sid=mtwtilGDApr3_Cf8AAAE HTTP/1.1" 200 122449 0.046216
+2026-03-23 01:05:36,143 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /sounds/1.mp3 HTTP/1.1" 206 33099 0.001562
+2026-03-23 01:05:36,146 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001029
+2026-03-23 01:05:36,150 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /sounds/2.mp3 HTTP/1.1" 206 8521 0.002544
+2026-03-23 01:05:36,175 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:05:36] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000879
+2026-03-23 01:16:36,714 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 01:16:36,717 - MohibisGame - INFO - Database initialized successfully
+2026-03-23 01:16:36,717 - MohibisGame - INFO - Server starting on http://192.168.0.188:5000
+2026-03-23 01:16:47,877 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:47] "GET / HTTP/1.1" 200 107614 0.041826
+2026-03-23 01:16:48,170 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:48] "GET /static/left_closed.png HTTP/1.1" 200 94004 0.043784
+2026-03-23 01:16:48,657 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:48] "GET /static/right_closed.png HTTP/1.1" 200 101866 0.003896
+2026-03-23 01:16:49,198 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /static/left_closed.png HTTP/1.1" 304 191 0.002121
+2026-03-23 01:16:49,200 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001982
+2026-03-23 01:16:49,273 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.002994
+2026-03-23 01:16:49,311 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /static/left_closed.png HTTP/1.1" 304 191 0.003149
+2026-03-23 01:16:49,344 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001715
+2026-03-23 01:16:49,354 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001002
+2026-03-23 01:16:49,356 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001994
+2026-03-23 01:16:49,360 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001520
+2026-03-23 01:16:49,364 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000998
+2026-03-23 01:16:49,713 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:16:49] "GET /@vite/client HTTP/1.1" 404 331 0.000000
+2026-03-23 01:16:59,929 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:16:59] "GET / HTTP/1.1" 200 107614 0.035731
+2026-03-23 01:17:00,512 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:17:00] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001113
+2026-03-23 01:17:00,514 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:17:00] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001224
+2026-03-23 01:17:00,530 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:17:00] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001152
+2026-03-23 01:17:00,563 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:17:00] "GET /favicon.ico HTTP/1.1" 404 331 0.000000
+2026-03-23 01:19:50,433 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:50] "GET / HTTP/1.1" 200 107614 0.019340
+2026-03-23 01:19:50,961 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:50] "GET /static/left_closed.png HTTP/1.1" 304 191 0.001035
+2026-03-23 01:19:51,012 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:51] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000998
+2026-03-23 01:19:51,113 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:51] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-23 01:19:51,117 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:51] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001899
+2026-03-23 01:19:51,122 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:51] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.000997
+2026-03-23 01:19:51,169 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:51] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001996
+2026-03-23 01:19:51,179 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:51] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000999
+2026-03-23 01:19:51,267 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:51] "GET /@vite/client HTTP/1.1" 404 331 0.000997
+2026-03-23 01:19:53,821 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET / HTTP/1.1" 200 107614 0.018081
+2026-03-23 01:19:53,892 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000998
+2026-03-23 01:19:53,898 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001524
+2026-03-23 01:19:53,920 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000998
+2026-03-23 01:19:53,924 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET /static/right_closed.png HTTP/1.1" 304 193 0.001996
+2026-03-23 01:19:53,963 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001876
+2026-03-23 01:19:53,975 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.002502
+2026-03-23 01:19:53,977 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.000997
+2026-03-23 01:19:53,981 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001994
+2026-03-23 01:19:53,991 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:53] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001996
+2026-03-23 01:19:54,057 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2026-03-23 01:19:54] "GET /@vite/client HTTP/1.1" 404 331 0.000998
+2026-03-23 01:21:19,522 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:21:19] "GET / HTTP/1.1" 200 107614 0.024209
+2026-03-23 01:21:19,557 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:21:19] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000998
+2026-03-23 01:21:19,576 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:21:19] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000804
+2026-03-23 01:21:19,644 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:21:19] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.009452
+2026-03-23 01:21:19,656 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:21:19] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.006838
+2026-03-23 01:21:19,662 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:21:19] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.004156
+2026-03-23 01:21:19,669 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:21:19] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.004335
+2026-03-23 01:21:19,682 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:21:19] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001092
+2026-03-23 01:22:15,529 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:22:15] "GET / HTTP/1.1" 200 107614 0.020289
+2026-03-23 01:22:15,554 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:22:15] "GET /static/left_closed.png HTTP/1.1" 304 191 0.000918
+2026-03-23 01:22:15,558 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:22:15] "GET /static/right_closed.png HTTP/1.1" 304 193 0.000960
+2026-03-23 01:22:15,571 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:22:15] "GET /sounds/3.mp3 HTTP/1.1" 206 42608 0.001458
+2026-03-23 01:22:15,577 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:22:15] "GET /sounds/1.mp3 HTTP/1.1" 206 24907 0.000999
+2026-03-23 01:22:15,579 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:22:15] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001933
+2026-03-23 01:22:15,605 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:22:15] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.000998
+2026-03-23 01:22:15,608 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:22:15] "GET /sounds/1.mp3 HTTP/1.1" 206 44280 0.001796
+2026-03-23 01:22:15,610 - geventwebsocket.handler - INFO - 192.168.0.190 - - [2026-03-23 01:22:15] "GET /sounds/2.mp3 HTTP/1.1" 206 47624 0.001517
