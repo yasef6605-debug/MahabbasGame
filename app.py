@@ -428,17 +428,18 @@ html_template = """
 
         .emoji-btn:hover { background: rgba(255,255,255,0.1); }
 
-        /* نافذة الملف الشخصي المنسدلة من الهيدر */
+        /* نافذة الملف الشخصي المنسدلة من الهيدر (جهة اليمين كما في الرسم) */
         #profile-modal {
             display: none;
             position: absolute;
-            top: 62px; /* تحت الهيدر مباشرة */
-            left: 0;
+            top: 62px;
+            right: 0;
+            left: auto;
             width: 100%;
             height: calc(100% - 62px);
-            background: rgba(0,0,0,0.4); /* خلفية شفافة خفيفة */
+            background: rgba(0,0,0,0.2); /* خلفية شفافة جداً */
             z-index: 2000;
-            justify-content: center;
+            justify-content: flex-end; /* محاذاة لليمين */
             align-items: flex-start;
             overflow: hidden;
             pointer-events: none;
@@ -451,13 +452,13 @@ html_template = """
 
         .profile-content {
             background: linear-gradient(to bottom, #1e2a4a, #0f192d);
-            width: 100%;
-            max-width: 450px;
-            padding: 20px;
-            border-radius: 0 0 25px 25px;
+            width: 250px; /* عرض ثابت يتناسب مع الرسم */
+            padding: 15px;
+            border-radius: 0 0 0 20px; /* انحناء من جهة اليسار فقط */
             border: 2px solid var(--gold);
             border-top: none;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            border-right: none; /* ملتصقة بالحافة اليمنى */
+            box-shadow: -5px 10px 30px rgba(0,0,0,0.6);
             transform: translateY(-100%);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
         }
@@ -551,46 +552,46 @@ html_template = """
         <!-- نافذة الملف الشخصي والإحصائيات المدمجة المنسدلة -->
         <div id="profile-modal" onclick="if(event.target === this) closeProfile()">
             <div class="profile-content">
-                <div style="background:rgba(255,215,0,0.1); padding:12px; border-radius:15px; border:1px solid var(--gold); margin-bottom:15px; text-align:center;">
-                    <p style="margin:0; color:#aaa; font-size:12px;">الرصيد الحالي</p>
-                    <p style="font-size:24px; color:var(--bright-gold); font-weight:bold; margin:5px 0;"><span id="stat-balance-large">0</span> 🏆</p>
-                    <div id="stat-title-display" style="font-size:12px; margin-top:2px;"></div>
+                <div style="background:rgba(255,215,0,0.1); padding:10px; border-radius:15px; border:1px solid var(--gold); margin-bottom:12px; text-align:center;">
+                    <p style="margin:0; color:#aaa; font-size:11px;">الرصيد الحالي</p>
+                    <p style="font-size:20px; color:var(--bright-gold); font-weight:bold; margin:3px 0;"><span id="stat-balance-large">0</span> 🏆</p>
+                    <div id="stat-title-display" style="font-size:10px; margin-top:2px;"></div>
                 </div>
 
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:15px;">
-                    <div style="background:rgba(0,0,0,0.3); padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.05);">
-                        <p style="margin:0 0 3px 0; color:#aaa; font-size:10px;">المستوى</p>
-                        <span id="stat-level" style="color:var(--bright-gold); font-size:16px; font-weight:bold;">1</span>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:12px;">
+                    <div style="background:rgba(0,0,0,0.3); padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.05);">
+                        <p style="margin:0 0 2px 0; color:#aaa; font-size:9px;">المستوى</p>
+                        <span id="stat-level" style="color:var(--bright-gold); font-size:14px; font-weight:bold;">1</span>
                     </div>
-                    <div style="background:rgba(0,0,0,0.3); padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.05);">
-                        <p style="margin:0 0 3px 0; color:#aaa; font-size:10px;">نسبة الفوز</p>
-                        <span id="stat-rate" style="color:#44cc44; font-size:16px; font-weight:bold;">0%</span>
+                    <div style="background:rgba(0,0,0,0.3); padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.05);">
+                        <p style="margin:0 0 2px 0; color:#aaa; font-size:9px;">نسبة الفوز</p>
+                        <span id="stat-rate" style="color:#44cc44; font-size:14px; font-weight:bold;">0%</span>
                     </div>
-                    <div style="background:rgba(0,0,0,0.3); padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.05);">
-                        <p style="margin:0 0 3px 0; color:#aaa; font-size:10px;">الألعاب</p>
-                        <span id="stat-total" style="color:white; font-size:16px; font-weight:bold;">0</span>
+                    <div style="background:rgba(0,0,0,0.3); padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.05);">
+                        <p style="margin:0 0 2px 0; color:#aaa; font-size:9px;">الألعاب</p>
+                        <span id="stat-total" style="color:white; font-size:14px; font-weight:bold;">0</span>
                     </div>
-                    <div style="background:rgba(0,0,0,0.3); padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.05);">
-                        <p style="margin:0 0 3px 0; color:#aaa; font-size:10px;">الفوز</p>
-                        <span id="stat-wins" style="color:var(--gold); font-size:16px; font-weight:bold;">0</span>
+                    <div style="background:rgba(0,0,0,0.3); padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.05);">
+                        <p style="margin:0 0 2px 0; color:#aaa; font-size:9px;">الفوز</p>
+                        <span id="stat-wins" style="color:var(--gold); font-size:14px; font-weight:bold;">0</span>
                     </div>
                 </div>
 
-                <div id="profile-edit-section" style="margin-top:10px; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px;">
-                    <div style="margin-bottom:12px;">
-                        <label style="display:block; color:#aaa; font-size:11px; margin-bottom:5px;">تغيير اللقب:</label>
-                        <div style="display:flex; gap:8px;">
-                            <input type="text" id="edit-display-name" placeholder="اللقب الجديد" style="flex:1; padding:8px; border-radius:8px; border:1px solid #444; background:rgba(0,0,0,0.2); color:white; font-size:13px;">
-                            <button class="btn-nav" onclick="updateProfileName()" style="width:auto; padding:8px 15px; font-size:12px; margin:0;">حفظ</button>
+                <div id="profile-edit-section" style="margin-top:8px; border-top:1px solid rgba(255,255,255,0.1); padding-top:10px;">
+                    <div style="margin-bottom:10px;">
+                        <label style="display:block; color:#aaa; font-size:10px; margin-bottom:3px;">اللقب:</label>
+                        <div style="display:flex; gap:5px;">
+                            <input type="text" id="edit-display-name" placeholder="جديد" style="flex:1; padding:6px; border-radius:6px; border:1px solid #444; background:rgba(0,0,0,0.2); color:white; font-size:11px;">
+                            <button class="btn-nav" onclick="updateProfileName()" style="width:auto; padding:6px 10px; font-size:11px; margin:0;">حفظ</button>
                         </div>
                     </div>
                     <div>
-                        <label style="display:block; color:#aaa; font-size:11px; margin-bottom:5px;">تغيير الصورة الشخصية:</label>
-                        <input type="file" onchange="uploadProfileImage(event)" accept="image/*" style="font-size:11px; color:#aaa; background:rgba(0,0,0,0.2); padding:8px; border-radius:8px; width:100%;">
+                        <input type="file" id="profile-upload" onchange="uploadProfileImage(event)" accept="image/*" style="display:none;">
+                        <button class="btn-nav" onclick="document.getElementById('profile-upload').click()" style="background:rgba(255,255,255,0.05); color:#aaa; font-size:10px; padding:6px; margin:0; width:100%;">تغيير الصورة 📷</button>
                     </div>
                 </div>
                 
-                <button class="btn-nav" onclick="closeProfile()" style="margin-top:20px; background:rgba(255,255,255,0.05); color:white; font-size:14px; padding:10px;">إغلاق الملف الشخصي 🔼</button>
+                <button class="btn-nav" onclick="closeProfile()" style="margin-top:15px; background:rgba(255,255,255,0.05); color:white; font-size:12px; padding:8px;">إغلاق 🔼</button>
             </div>
         </div>
 
