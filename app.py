@@ -428,39 +428,33 @@ html_template = """
 
         .emoji-btn:hover { background: rgba(255,255,255,0.1); }
 
-        /* نافذة الملف الشخصي المنسدلة من الهيدر (جهة اليمين) */
+        /* نافذة الملف الشخصي المنسدلة تحت صورة اللاعب مباشرة */
         #profile-modal {
             display: none;
             position: absolute;
-            top: 62px;
-            right: 0;
-            left: auto;
-            width: 100%;
-            height: calc(100% - 62px);
-            background: rgba(0,0,0,0.1);
-            z-index: 2000;
-            justify-content: flex-end; /* محاذاة لليمين */
-            align-items: flex-start;
-            overflow: hidden;
+            top: 52px; /* تحت الهيدر مباشرة */
+            right: 15px; /* محاذاة مع الملف الشخصي في اليمين */
+            width: 70px;
+            z-index: 5000; /* قيمة عالية جداً لضمان الظهور فوق كل شيء */
             pointer-events: none;
+            background: none; /* إزالة الخلفية المعتمة */
         }
 
         #profile-modal.active {
-            display: flex;
+            display: block;
             pointer-events: auto;
         }
 
         .profile-content {
             background: linear-gradient(to bottom, #1e2a4a, #0f192d);
-            width: 70px; /* العرض المطلوب 70 بكسل */
+            width: 70px;
             padding: 5px;
-            border-radius: 0 0 0 15px; /* انحناء من جهة اليسار السفلية */
+            border-radius: 10px;
             border: 1px solid var(--gold);
-            border-top: none;
-            border-right: none; /* ملتصقة بالحافة اليمنى */
-            box-shadow: -3px 5px 20px rgba(0,0,0,0.6);
-            transform: translateY(-100%);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.8);
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: all 0.3s ease-out;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -469,6 +463,7 @@ html_template = """
 
         #profile-modal.active .profile-content {
             transform: translateY(0);
+            opacity: 1;
         }
 
         #chat-box {
@@ -533,20 +528,20 @@ html_template = """
 
     <div id="main-ui" style="display:none; height:100%; display:flex; flex-direction:column; position:relative;">
         <div id="header">
+            <div style="display:flex; gap:10px;">
+                <button onclick="toggleSidebar(true)" style="background:none; border:none; color:var(--gold); cursor:pointer; font-size:20px;">👥</button>
+                <button onclick="logout()" style="background:none; border:none; color:#ff4444; cursor:pointer; font-size:14px;">خروج</button>
+            </div>
+            <div style="color:var(--bright-gold); font-weight:bold; font-size:14px;">لعبة المحيبس 💍</div>
             <div class="user-info" onclick="showProfile()">
+                <div style="display:flex; flex-direction:column; align-items:flex-end;">
+                    <span id="current-displayname" style="font-size:12px;">...</span>
+                    <span id="current-balance" style="color:var(--gold); font-size:10px;">0 🏆</span>
+                </div>
                 <div id="header-profile-img-container" style="position:relative;">
                     <img id="header-profile-img" src="https://www.gravatar.com/avatar/000?d=mp" style="width:30px; height:30px;">
                     <div id="header-player-level" style="position:absolute; bottom:-3px; right:-3px; background:var(--gold); color:black; border-radius:50%; width:14px; height:14px; font-size:8px; display:flex; align-items:center; justify-content:center; font-weight:bold;">1</div>
                 </div>
-                <div style="display:flex; flex-direction:column; align-items:flex-start;">
-                    <span id="current-displayname" style="font-size:12px;">...</span>
-                    <span id="current-balance" style="color:var(--gold); font-size:10px;">0 🏆</span>
-                </div>
-            </div>
-            <div style="color:var(--bright-gold); font-weight:bold; font-size:14px;">لعبة المحيبس 💍</div>
-            <div style="display:flex; gap:10px;">
-                <button onclick="toggleSidebar(true)" style="background:none; border:none; color:var(--gold); cursor:pointer; font-size:20px;">👥</button>
-                <button onclick="logout()" style="background:none; border:none; color:#ff4444; cursor:pointer; font-size:14px;">خروج</button>
             </div>
         </div>
 
