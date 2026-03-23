@@ -428,18 +428,18 @@ html_template = """
 
         .emoji-btn:hover { background: rgba(255,255,255,0.1); }
 
-        /* نافذة الملف الشخصي المنسدلة من الهيدر (جهة اليسار كما في الرسم الجديد) */
+        /* نافذة الملف الشخصي المنسدلة من الهيدر (جهة اليمين) */
         #profile-modal {
             display: none;
             position: absolute;
             top: 62px;
-            left: 0;
-            right: auto;
+            right: 0;
+            left: auto;
             width: 100%;
             height: calc(100% - 62px);
             background: rgba(0,0,0,0.1);
             z-index: 2000;
-            justify-content: flex-start; /* محاذاة لليسار */
+            justify-content: flex-end; /* محاذاة لليمين */
             align-items: flex-start;
             overflow: hidden;
             pointer-events: none;
@@ -452,13 +452,13 @@ html_template = """
 
         .profile-content {
             background: linear-gradient(to bottom, #1e2a4a, #0f192d);
-            width: 60px; /* العرض الجديد 60 بكسل */
+            width: 70px; /* العرض المطلوب 70 بكسل */
             padding: 5px;
-            border-radius: 0 0 15px 0; /* انحناء من جهة اليمين السفلية */
+            border-radius: 0 0 0 15px; /* انحناء من جهة اليسار السفلية */
             border: 1px solid var(--gold);
             border-top: none;
-            border-left: none; /* ملتصقة بالحافة اليسرى */
-            box-shadow: 3px 5px 20px rgba(0,0,0,0.6);
+            border-right: none; /* ملتصقة بالحافة اليمنى */
+            box-shadow: -3px 5px 20px rgba(0,0,0,0.6);
             transform: translateY(-100%);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
             display: flex;
@@ -533,20 +533,20 @@ html_template = """
 
     <div id="main-ui" style="display:none; height:100%; display:flex; flex-direction:column; position:relative;">
         <div id="header">
-            <div style="display:flex; gap:10px;">
-                <button onclick="toggleSidebar(true)" style="background:none; border:none; color:var(--gold); cursor:pointer; font-size:20px;">👥</button>
-                <button onclick="logout()" style="background:none; border:none; color:#ff4444; cursor:pointer; font-size:14px;">خروج</button>
-            </div>
-            <div style="color:var(--bright-gold); font-weight:bold; font-size:14px;">لعبة المحيبس 💍</div>
             <div class="user-info" onclick="showProfile()">
-                <div style="display:flex; flex-direction:column; align-items:flex-end;">
-                    <span id="current-displayname" style="font-size:12px;">...</span>
-                    <span id="current-balance" style="color:var(--gold); font-size:10px;">0 🏆</span>
-                </div>
                 <div id="header-profile-img-container" style="position:relative;">
                     <img id="header-profile-img" src="https://www.gravatar.com/avatar/000?d=mp" style="width:30px; height:30px;">
                     <div id="header-player-level" style="position:absolute; bottom:-3px; right:-3px; background:var(--gold); color:black; border-radius:50%; width:14px; height:14px; font-size:8px; display:flex; align-items:center; justify-content:center; font-weight:bold;">1</div>
                 </div>
+                <div style="display:flex; flex-direction:column; align-items:flex-start;">
+                    <span id="current-displayname" style="font-size:12px;">...</span>
+                    <span id="current-balance" style="color:var(--gold); font-size:10px;">0 🏆</span>
+                </div>
+            </div>
+            <div style="color:var(--bright-gold); font-weight:bold; font-size:14px;">لعبة المحيبس 💍</div>
+            <div style="display:flex; gap:10px;">
+                <button onclick="toggleSidebar(true)" style="background:none; border:none; color:var(--gold); cursor:pointer; font-size:20px;">👥</button>
+                <button onclick="logout()" style="background:none; border:none; color:#ff4444; cursor:pointer; font-size:14px;">خروج</button>
             </div>
         </div>
 
