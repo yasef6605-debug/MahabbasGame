@@ -664,6 +664,8 @@ html_template = """
             bestScoresByDifficulty: { easy: 0, medium: 0, hard: 0 }
         };
 
+        let onlinePlayers = []; // لتخزين قائمة اللاعبين المتصلين عالمياً
+
         // إعدادات الصعوبة
         const difficultySettings = {
             easy: { ringPositions: 6, attempts: 7, timeLimit: 240, scoreMultiplier: 1.0 },
@@ -1081,8 +1083,8 @@ html_template = """
         let pendingToSid = null;
 
         function sendInvitation(toSid) {
-            const self = players.find(p => p.sid === socket.id);
-            const opponent = players.find(p => p.sid === toSid);
+            const self = onlinePlayers.find(p => p.sid === socket.id);
+            const opponent = onlinePlayers.find(p => p.sid === toSid);
 
             if (!self || !opponent) {
                 alert('خطأ في جلب بيانات اللاعبين. يرجى تحديث الصفحة.');
@@ -1253,6 +1255,7 @@ html_template = """
             } else alert(data.message);
         });
         socket.on('players_list_updated', (players) => {
+            onlinePlayers = players; // حفظ القائمة عالمياً
             const listDiv = document.getElementById('players-list');
             if (!listDiv) return;
             listDiv.innerHTML = '';
@@ -1474,6 +1477,16 @@ def handle_login(data):
         conn.commit()
         conn.close()
         
+        # تحديث قائمة اللاعبين المتصلين
+        players[request.sid] = {
+            'sid': request.sid,
+            'player_id': player['id'],
+            'name': player['display_name'] or player['username'],
+            'profile_image': player['profile_image'],
+            'status': 'available'
+        }
+        emit('players_list_updated', list(players.values()), broadcast=True)
+        
         emit('login_response', {
             'success': True,
             'player_id': player['id'],
@@ -1498,6 +1511,16 @@ def handle_check_session():
         conn.close()
         
         if player:
+            # تحديث قائمة اللاعبين المتصلين
+            players[request.sid] = {
+                'sid': request.sid,
+                'player_id': player['id'],
+                'name': player['display_name'] or player['username'],
+                'profile_image': player['profile_image'],
+                'status': 'available'
+            }
+            emit('players_list_updated', list(players.values()), broadcast=True)
+
             emit('session_check', {
                 'logged_in': True,
                 'player_id': player['id'],
