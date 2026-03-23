@@ -373,77 +373,15 @@ html_template = """
             display: inline-block;
         }
 
-        .quick-chat-dropdown {
-            display: none;
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(15, 25, 45, 0.98);
-            border: 2px solid var(--gold);
-            border-radius: 15px;
-            padding: 10px;
-            width: 90%; /* عرض مرن يناسب الموبايل */
-            max-width: 450px; /* أقصى عرض لتسهيل الكتابة */
-            max-height: 400px;
-            overflow-y: auto;
-            z-index: 2000;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        /* تنسيق خانة الكتابة */
+        .chat-input-bar {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
         }
-
-        .quick-chat-dropdown.active { display: flex; flex-direction: column; gap: 10px; }
-
-        /* تنسيق خانة الكتابة والكيبورد */
-        .chat-input-container {
-            display: flex;
-            gap: 5px;
-            background: rgba(0,0,0,0.3);
-            padding: 5px;
-            border-radius: 10px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+        .chat-input-bar:focus-within {
+            border-color: var(--bright-gold) !important;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
         }
-        .chat-input-container input {
-            flex: 1;
-            background: none;
-            border: none;
-            color: white;
-            padding: 10px;
-            font-size: 16px; /* حجم خط أكبر لمنع الزووم في الآيفون وتسهيل القراءة */
-            outline: none;
-        }
-        .chat-send-btn {
-            background: var(--gold);
-            color: black;
-            border: none;
-            border-radius: 8px;
-            padding: 5px 12px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .virtual-keyboard {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            gap: 3px;
-            background: rgba(255,255,255,0.05);
-            padding: 5px;
-            border-radius: 8px;
-        }
-        .key-btn {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.1);
-            color: white;
-            padding: 8px 2px;
-            border-radius: 4px;
-            font-size: 12px;
-            cursor: pointer;
-            text-align: center;
-        }
-        .key-btn:hover { background: rgba(212, 175, 55, 0.3); }
-        .key-btn.wide { grid-column: span 2; }
-        .key-btn.extra-wide { grid-column: span 3; }
-        .key-btn.space { grid-column: span 5; }
-        .key-btn.special { background: rgba(212, 175, 55, 0.2); color: var(--gold); }
 
         .quick-msg-btn {
             display: block;
@@ -699,35 +637,17 @@ html_template = """
 
             <div id="chat-messages" style="width:100%; max-width:400px; height:120px; overflow-y:auto; background:rgba(0,0,0,0.3); border-radius:10px; padding:10px; margin:10px auto; display:flex; flex-direction:column;"></div>
             
-            <div id="online-quick-msgs" style="display:flex; gap:5px; justify-content:center; width:100%;">
-                <div class="quick-chat-container">
-                    <button class="btn-nav" onclick="toggleQuickChat()" style="font-size:12px; padding:8px 12px; width:auto; border-radius:10px;">💬 دردشة سريعة</button>
-                    <div id="quick-chat-dropdown" class="quick-chat-dropdown">
-                        <div class="chat-input-container">
-                            <input type="text" id="chat-custom-input" placeholder="اكتب رسالتك..." onkeypress="if(event.key === 'Enter') sendCustomChatMessage()">
-                            <button class="chat-send-btn" onclick="sendCustomChatMessage()">إرسال</button>
-                        </div>
-                        <div class="emoji-grid">
-                            <button class="emoji-btn" onclick="sendQuickMessage('😂')">😂</button>
-                            <button class="emoji-btn" onclick="sendQuickMessage('🤣')">🤣</button>
-                            <button class="emoji-btn" onclick="sendQuickMessage('😜')">😜</button>
-                            <button class="emoji-btn" onclick="sendQuickMessage('🤫')">🤫</button>
-                            <button class="emoji-btn" onclick="sendQuickMessage('🤔')">🤔</button>
-                            <button class="emoji-btn" onclick="sendQuickMessage('👀')">👀</button>
-                            <button class="emoji-btn" onclick="sendQuickMessage('🔥')">🔥</button>
-                            <button class="emoji-btn" onclick="sendQuickMessage('👏')">👏</button>
-                        </div>
-                        <button class="quick-msg-btn" onclick="sendQuickMessage('وين المحبس؟')">وين المحبس؟ 💍</button>
-                        <button class="quick-msg-btn" onclick="sendQuickMessage('عاش ايدك يا بطل')">عاش ايدك يا بطل 👏</button>
-                        <button class="quick-msg-btn" onclick="sendQuickMessage('قربت حيل!')">قربت حيل! 🔥</button>
-                        <button class="quick-msg-btn" onclick="sendQuickMessage('صياد والله!')">صياد والله! 🎯</button>
-                        <button class="quick-msg-btn" onclick="sendQuickMessage('حاول مرة ثانية')">حاول مرة ثانية 😜</button>
-                        <button class="quick-msg-btn" onclick="sendQuickMessage('المحبس ضاع!')">المحبس ضاع! 😂</button>
-                        <button class="quick-msg-btn" onclick="sendQuickMessage('بالحظ هاي!')">بالحظ هاي! 🤔</button>
-                        <button class="quick-msg-btn" onclick="sendQuickMessage('يا الله توكلنا')">يا الله توكلنا 🤲</button>
-                    </div>
-                </div>
-                <button class="btn-nav" onclick="leaveOnlineGame()" style="font-size:12px; padding:8px 12px; width:auto; background:red; border-radius:10px;">انسحاب</button>
+            <!-- خانة الدردشة المباشرة -->
+            <div class="chat-input-bar" style="width:100%; max-width:400px; margin:0 auto 10px auto; display:flex; gap:5px; background:rgba(0,0,0,0.5); padding:5px; border-radius:12px; border:1px solid var(--gold);">
+                <input type="text" id="chat-custom-input" placeholder="اكتب رسالتك هنا..." 
+                       style="flex:1; background:none; border:none; color:white; padding:10px; font-size:16px; outline:none;"
+                       onkeypress="if(event.key === 'Enter') sendCustomChatMessage()">
+                <button class="btn-nav" onclick="sendCustomChatMessage()" 
+                        style="width:auto; padding:0 15px; margin:0; background:var(--gold); color:black; font-weight:bold; font-size:14px; border-radius:8px;">إرسال</button>
+            </div>
+            
+            <div id="online-quick-msgs" style="display:flex; justify-content:center; width:100%;">
+                <button class="btn-nav" onclick="leaveOnlineGame()" style="font-size:12px; padding:8px 20px; width:auto; background:linear-gradient(to bottom, #ff4444, #cc0000); border-radius:10px; color:white;">انسحاب من اللعبة</button>
             </div>
         </div>
     </div>
@@ -1451,18 +1371,9 @@ html_template = """
             }
         }
 
-        function toggleQuickChat() {
-            const dropdown = document.getElementById('quick-chat-dropdown');
-            dropdown.classList.toggle('active');
-            if (dropdown.classList.contains('active')) {
-                document.getElementById('chat-custom-input').focus();
-            }
-        }
-
         function sendQuickMessage(msg) {
             if (currentRoom) {
                 socket.emit('send_message', {room_id: currentRoom, message: msg});
-                document.getElementById('quick-chat-dropdown').classList.remove('active');
             }
         }
 
