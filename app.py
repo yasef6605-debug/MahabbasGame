@@ -6,7 +6,7 @@ from flask import Flask, render_template_string, request, session
 from flask_socketio import SocketIO, emit, join_room, leave_room
 from werkzeug.security import generate_password_hash, check_password_hash
 import json
-import webview
+# تم إزالة webview للسيرفر الخارجي
 from threading import Thread
 
 # إعداد السجلات
@@ -15,7 +15,7 @@ logger = logging.getLogger("MohibisGame")
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mohibis_secret_key_2024'
-socketio = SocketIO(app, cors_allowed_origins="*", manage_session=True, async_mode='threading')
+socketio = SocketIO(app, cors_allowed_origins="*", manage_session=True)
 
 DB_PATH = 'mohibis.db'
 
