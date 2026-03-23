@@ -1098,12 +1098,27 @@ html_template = """
         let pendingToSid = null;
 
         function sendInvitation(toSid) {
+            if (!onlinePlayers || onlinePlayers.length === 0) {
+                alert('جاري تحديث قائمة اللاعبين.. يرجى المحاولة بعد ثوانٍ');
+                socket.emit('get_players');
+                return;
+            }
+
             const self = onlinePlayers.find(p => p.sid === socket.id);
             const opponent = onlinePlayers.find(p => p.sid === toSid);
 
-            if (!self || !opponent) {
-                alert('خطأ في جلب بيانات اللاعبين. يرجى تحديث الصفحة.');
-                console.error("Could not find player data. Self:", self, "Opponent:", opponent);
+            if (!opponent) {
+                alert('هذا اللاعب لم يعد متصلاً!');
+                return;
+            }
+
+            if (!self) {
+                console.warn("Self not found in onlinePlayers, attempting to re-register...");
+                socket.emit('get_players');
+                // سنسمح بالاستمرار هنا لأن السيرفر سيتحقق من الهوية على أي حال
+                // لكننا سنفقد فحص تحدي النفس مؤقتاً
+                pendingToSid = toSid;
+                document.getElementById('bet-modal').style.display = 'flex';
                 return;
             }
 
@@ -1451,9 +1466,30 @@ def index():
 players = {} # sid -> player_info
 rooms = {} # room_id -> room_info
 
+def register_player_sid(sid):
+    if 'player_id' in session:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute('SELECT display_name, profile_image FROM players WHERE id = ?', (session['player_id'],))
+        p = cursor.fetchone()
+        conn.close()
+        
+        if p:
+            players[sid] = {
+                'sid': sid,
+                'player_id': session['player_id'],
+                'name': p['display_name'],
+                'profile_image': p['profile_image'],
+                'status': 'available'
+            }
+            return True
+    return False
+
 @socketio.on('connect')
 def handle_connect():
     logger.info(f"Client connected: {request.sid}")
+    if register_player_sid(request.sid):
+        emit('players_list_updated', list(players.values()), broadcast=True)
 
 @socketio.on('register')
 def handle_register(data):
@@ -1506,13 +1542,7 @@ def handle_login(data):
         conn.close()
         
         # تحديث قائمة اللاعبين المتصلين
-        players[request.sid] = {
-            'sid': request.sid,
-            'player_id': player['id'],
-            'name': player['display_name'] or player['username'],
-            'profile_image': player['profile_image'],
-            'status': 'available'
-        }
+        register_player_sid(request.sid)
         emit('players_list_updated', list(players.values()), broadcast=True)
         
         emit('login_response', {
@@ -1540,13 +1570,7 @@ def handle_check_session():
         
         if player:
             # تحديث قائمة اللاعبين المتصلين
-            players[request.sid] = {
-                'sid': request.sid,
-                'player_id': player['id'],
-                'name': player['display_name'] or player['username'],
-                'profile_image': player['profile_image'],
-                'status': 'available'
-            }
+            register_player_sid(request.sid)
             emit('players_list_updated', list(players.values()), broadcast=True)
 
             emit('session_check', {
@@ -1630,19 +1654,7 @@ def handle_update_stats(data):
 @socketio.on('get_players')
 def handle_get_players():
     # تحديث معلومات اللاعب الحالي
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute('SELECT display_name, profile_image FROM players WHERE id = ?', (session.get('player_id'),))
-    p = cursor.fetchone()
-    conn.close()
-    
-    players[request.sid] = {
-        'sid': request.sid,
-        'player_id': session.get('player_id'),
-        'name': p['display_name'] if p else 'ضيف',
-        'profile_image': p['profile_image'] if p else None,
-        'status': 'available'
-    }
+    register_player_sid(request.sid)
     
     available_players = [p for p in players.values()]
     emit('players_list_updated', available_players, broadcast=True)
