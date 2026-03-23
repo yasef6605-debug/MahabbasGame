@@ -696,7 +696,7 @@ html_template = """
                 {% endfor %}
             </div>
 
-            <div id="chat-messages" style="width:100%; max-width:400px; height:60px; overflow-y:auto; background:rgba(0,0,0,0.3); border-radius:10px; padding:8px; margin:10px auto; text-align:right; font-size:12px;"></div>
+            <div id="chat-messages" style="width:100%; max-width:400px; height:120px; overflow-y:auto; background:rgba(0,0,0,0.3); border-radius:10px; padding:10px; margin:10px auto; display:flex; flex-direction:column;"></div>
             
             <div id="online-quick-msgs" style="display:flex; gap:5px; justify-content:center; width:100%;">
                 <div class="quick-chat-container">
@@ -1469,8 +1469,33 @@ html_template = """
             const chatDiv = document.getElementById('chat-messages');
             if (!chatDiv) return;
             const msgDiv = document.createElement('div');
-            msgDiv.style.cssText = `padding:8px; border-radius:10px; background:${isSelf ? 'rgba(212,175,55,0.2)' : 'rgba(0,0,0,0.3)'}; border:1px solid ${isSelf ? 'var(--gold)' : 'rgba(255,255,255,0.1)'}; margin-bottom:5px;`;
-            msgDiv.innerHTML = `<p style="color:${isSelf ? 'var(--bright-gold)' : '#aaa'}; font-size:12px; margin:0;">${sender}</p><p style="color:#fff; font-size:14px; margin:0;">${message}</p>`;
+            
+            // تحسين التصميم والمحاذاة
+            msgDiv.style.display = 'flex';
+            msgDiv.style.flexDirection = 'column';
+            msgDiv.style.marginBottom = '8px';
+            msgDiv.style.maxWidth = '80%';
+            
+            if (isSelf) {
+                // رسائلك تظهر في جهة اليمين
+                msgDiv.style.marginLeft = 'auto';
+                msgDiv.style.marginRight = '0';
+                msgDiv.style.alignItems = 'flex-end';
+                msgDiv.innerHTML = `
+                    <span style="color:var(--gold); font-size:10px; font-weight:bold; margin-bottom:2px;">أنت</span>
+                    <div style="background:rgba(212,175,55,0.2); color:white; padding:6px 12px; border-radius:12px 12px 0 12px; border:1px solid var(--gold); font-size:13px; text-align:right;">${message}</div>
+                `;
+            } else {
+                // رسائل الخصم تظهر في جهة اليسار
+                msgDiv.style.marginRight = 'auto';
+                msgDiv.style.marginLeft = '0';
+                msgDiv.style.alignItems = 'flex-start';
+                msgDiv.innerHTML = `
+                    <span style="color:#aaa; font-size:10px; font-weight:bold; margin-bottom:2px;">${sender}</span>
+                    <div style="background:rgba(255,255,255,0.1); color:white; padding:6px 12px; border-radius:12px 12px 12px 0; border:1px solid rgba(255,255,255,0.2); font-size:13px; text-align:left;">${message}</div>
+                `;
+            }
+            
             chatDiv.appendChild(msgDiv);
             chatDiv.scrollTop = chatDiv.scrollHeight;
         }
