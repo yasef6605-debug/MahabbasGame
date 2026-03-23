@@ -56,12 +56,17 @@ def init_db():
         wins_by_mode TEXT, -- JSON string
         best_scores_by_difficulty TEXT, -- JSON string
         last_bonus_date TEXT, -- YYYY-MM-DD
+        bonus_streak INTEGER DEFAULT 0,
         FOREIGN KEY (player_id) REFERENCES players (id)
     )
     ''')
     # فحص إذا كان العمود موجوداً بالفعل (للترقية)
     try:
         cursor.execute('ALTER TABLE statistics ADD COLUMN last_bonus_date TEXT')
+    except:
+        pass
+    try:
+        cursor.execute('ALTER TABLE statistics ADD COLUMN bonus_streak INTEGER DEFAULT 0')
     except:
         pass
     conn.execute('UPDATE statistics SET total_score = 100 WHERE total_score < 100')
@@ -784,10 +789,11 @@ html_template = """
                         losses: s.losses || 0,
                         bestTime: s.best_time || null,
                         totalAttempts: s.total_attempts || 0,
-                        totalScore: s.total_score || 0,
+                        totalScore: Number(s.total_score || 0),
                         winsByMode: typeof s.wins_by_mode === 'string' ? JSON.parse(s.wins_by_mode) : s.wins_by_mode || { guessing: 0, challenge: 0, online: 0 },
                         bestScoresByDifficulty: typeof s.best_scores_by_difficulty === 'string' ? JSON.parse(s.best_scores_by_difficulty) : s.best_scores_by_difficulty || { easy: 0, medium: 0, hard: 0 },
-                        lastBonusDate: s.last_bonus_date
+                        lastBonusDate: s.last_bonus_date,
+                        bonusStreak: Number(s.bonus_streak || 0)
                     };
                     if (balanceEl) balanceEl.innerText = `رصيد: ${stats.totalScore.toLocaleString()} 🏆`;
                     
@@ -800,12 +806,17 @@ html_template = """
                     }
                     if (levelEl) levelEl.innerText = rank.level;
 
-                    // فحص المكافأة اليومية
+                    // فحص وتحديث المكافأة اليومية
                     const today = new Date().toISOString().split('T')[0];
+                    const dailyBtn = document.getElementById('daily-bonus-btn');
                     if (stats.lastBonusDate === today) {
                         document.getElementById('daily-bonus-container').style.display = 'none';
                     } else {
                         document.getElementById('daily-bonus-container').style.display = 'block';
+                        // حساب قيمة المكافأة المتوقعة للعرض
+                        const nextStreak = (stats.bonusStreak % 7) + 1;
+                        const nextAmount = 10 + (nextStreak - 1) * 5;
+                        if (dailyBtn) dailyBtn.innerHTML = `🎁 مكافأة اليوم ${nextStreak} (${nextAmount} 🏆)`;
                     }
                 }
                 updateStatsDisplay();
@@ -1531,9 +1542,12 @@ html_template = """
         socket.on('stats_updated', (data) => {
             if (data.stats) {
                 const s = data.stats;
-                stats.totalScore = s.total_score;
+                stats.totalScore = Number(s.total_score);
                 stats.lastBonusDate = s.last_bonus_date;
-                document.getElementById('current-balance').innerText = `رصيد: ${stats.totalScore.toLocaleString()} 🏆`;
+                stats.bonusStreak = Number(s.bonus_streak || 0);
+                
+                const balanceEl = document.getElementById('current-balance');
+                if (balanceEl) balanceEl.innerText = `رصيد: ${stats.totalScore.toLocaleString()} 🏆`;
                 
                 // تحديث اللقب والمستوى
                 const rank = getRankData(stats.totalScore);
@@ -1548,7 +1562,7 @@ html_template = """
 
                 if (data.bonus_claimed) {
                     showPointsNotification(data.amount);
-                    alert(`مبروك! حصلت على مكافأتك اليومية: ${data.amount} 🏆`);
+                    alert(`مبروك! حصلت على مكافأة اليوم ${data.streak}: ${data.amount} 🏆`);
                     document.getElementById('daily-bonus-container').style.display = 'none';
                 }
                 updateStatsDisplay();
@@ -1853,30 +1867,52 @@ def handle_get_leaderboard():
 def handle_claim_daily_bonus():
     if 'player_id' not in session: return
     
-    today = datetime.now().strftime('%Y-%m-%d')
+    from datetime import datetime, timedelta
+    now = datetime.now()
+    today = now.strftime('%Y-%m-%d')
+    yesterday = (now - timedelta(days=1)).strftime('%Y-%m-%d')
+    
     conn = get_db_connection()
     cursor = conn.cursor()
     
-    cursor.execute('SELECT last_bonus_date, total_score FROM statistics WHERE player_id = ?', (session['player_id'],))
+    cursor.execute('SELECT last_bonus_date, bonus_streak, total_score FROM statistics WHERE player_id = ?', (session['player_id'],))
     row = cursor.fetchone()
     
     if row:
         last_date = row['last_bonus_date']
+        streak = row['bonus_streak'] or 0
+        
         if last_date == today:
             emit('error', {'message': 'لقد حصلت على مكافأتك اليومية بالفعل! عد غداً'})
         else:
-            bonus_amount = 100
+            # تحديث المتتالية (Streak)
+            if last_date == yesterday:
+                streak = (streak % 7) + 1
+            else:
+                streak = 1
+            
+            # حساب قيمة المكافأة (اليوم الأول 10، اليوم الثاني 15، وهكذا...)
+            bonus_amount = 10 + (streak - 1) * 5
+            
             cursor.execute('''
                 UPDATE statistics 
-                SET total_score = total_score + ?, last_bonus_date = ? 
+                SET total_score = total_score + ?, last_bonus_date = ?, bonus_streak = ? 
                 WHERE player_id = ?
-            ''', (bonus_amount, today, session['player_id']))
+            ''', (bonus_amount, today, streak, session['player_id']))
             conn.commit()
             
             # جلب البيانات المحدثة
             cursor.execute('SELECT * FROM statistics WHERE player_id = ?', (session['player_id'],))
             updated_stats = cursor.fetchone()
-            emit('stats_updated', {'stats': dict(updated_stats), 'bonus_claimed': True, 'amount': bonus_amount})
+            
+            # إرسال تحديث شامل للإحصائيات
+            emit('stats_updated', {
+                'stats': dict(updated_stats), 
+                'bonus_claimed': True, 
+                'amount': bonus_amount,
+                'streak': streak
+            })
+            logger.info(f"Daily bonus claimed by {session['player_id']}: {bonus_amount} (Day {streak})")
     
     conn.close()
 
