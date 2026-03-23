@@ -640,7 +640,22 @@ html_template = """
     <audio id="left2" src="/static/3.mp3" preload="auto"></audio> <!-- صوت الفوز -->
 
     <script>
-        const socket = io();
+        const socket = io({
+            reconnectionAttempts: 5,
+            timeout: 10000
+        });
+        
+        socket.on('connect_error', (error) => {
+            console.error('Socket Connection Error:', error);
+        });
+        
+        socket.on('connect', () => {
+            console.log('Connected to server with SID:', socket.id);
+        });
+        
+        socket.on('disconnect', (reason) => {
+            console.log('Disconnected from server:', reason);
+        });
         
         // --- متغيرات الحالة العامة ---
         let isGameOver = false;
@@ -1111,6 +1126,13 @@ html_template = """
             const betInput = document.getElementById('bet-input');
             const betAmount = parseInt(betInput.value);
             
+            console.log('Sending invitation to:', pendingToSid, 'with bet:', betAmount);
+            
+            if (!pendingToSid) {
+                alert("حدث خطأ: لم يتم تحديد اللاعب الخصم!");
+                return;
+            }
+            
             if (isNaN(betAmount) || betAmount < 20) {
                 alert("الرهان يجب أن يكون رقماً ولا يقل عن 20 نقطة!");
                 return;
@@ -1390,7 +1412,10 @@ html_template = """
             }
             addChatMessage('System', '🔄 بدأت جولة جديدة!');
         });
-        socket.on('error', (data) => { alert(data.message); });
+        socket.on('error', (data) => { 
+            console.error('Server Error:', data.message);
+            alert(data.message); 
+        });
         socket.on('stats_updated', (data) => {
             if (data.stats) {
                 const s = data.stats;
@@ -1402,7 +1427,7 @@ html_template = """
 
         // --- تهيئة عند التحميل ---
         document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => socket.emit('check_session'), 500);
+            setTimeout(() => socket.emit('check_session'), 100);
         });
 
         // دعم اللمس للجوال
@@ -1422,6 +1447,9 @@ def index():
     return render_template_string(html_template)
 
 # --- أحداث SocketIO ---
+
+players = {} # sid -> player_info
+rooms = {} # room_id -> room_info
 
 @socketio.on('connect')
 def handle_connect():
@@ -1599,9 +1627,6 @@ def handle_update_stats(data):
 
 # --- منطق الأونلاين ---
 
-players = {} # sid -> player_info
-rooms = {} # room_id -> room_info
-
 @socketio.on('get_players')
 def handle_get_players():
     # تحديث معلومات اللاعب الحالي
@@ -1626,13 +1651,31 @@ def handle_get_players():
 def handle_invitation(data):
     to_sid = data.get('to_sid')
     bet = data.get('bet', 20)
-    if to_sid in players and players[to_sid]['status'] == 'available':
-        emit('invitation_received', {
-            'from_sid': request.sid,
-            'from_name': players[request.sid]['name'],
-            'invitation_id': f"{request.sid}_{to_sid}",
-            'bet': bet
-        }, room=to_sid)
+    
+    logger.info(f"Invitation attempt: from={request.sid}, to={to_sid}, bet={bet}")
+    
+    if request.sid not in players:
+        logger.warning(f"Sender {request.sid} not in players list")
+        emit('error', {'message': 'خطأ: بياناتك غير موجودة في قائمة المتصلين! يرجى تحديث الصفحة'})
+        return
+
+    if to_sid not in players:
+        logger.warning(f"Target player {to_sid} not found in players list")
+        emit('error', {'message': 'اللاعب المستهدف لم يعد متصلاً!'})
+        return
+        
+    if players[to_sid]['status'] != 'available':
+        logger.warning(f"Target player {to_sid} is busy (status: {players[to_sid]['status']})")
+        emit('error', {'message': 'اللاعب المستهدف في لعبة أخرى حالياً!'})
+        return
+        
+    logger.info(f"Emitting invitation_received to {to_sid} from {players[request.sid]['name']}")
+    emit('invitation_received', {
+        'from_sid': request.sid,
+        'from_name': players[request.sid]['name'],
+        'invitation_id': f"{request.sid}_{to_sid}",
+        'bet': bet
+    }, room=to_sid)
 
 @socketio.on('accept_invitation')
 def handle_accept(data):
