@@ -433,7 +433,8 @@ html_template = """
             display: none;
             position: absolute;
             top: 60px; /* تحت الهيدر مباشرة */
-            right: 10px;
+            left: 10px; /* تغيير من اليمين إلى اليسار ليناسب موقع الملف الشخصي */
+            right: auto;
             width: 70px;
             z-index: 9999;
             pointer-events: none;
