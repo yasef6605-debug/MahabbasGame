@@ -604,13 +604,13 @@ html_template = """
     </div>
 
     <!-- نافذة المتصدرين -->
-    <div id="leaderboard-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:3500; align-items:center; justify-content:center; padding:20px;">
-        <div style="background:#1e2a4a; padding:30px; border-radius:20px; border:2px solid var(--gold); max-width:500px; width:100%; max-height:90vh; display:flex; flex-direction:column;">
-            <h2 style="color:var(--bright-gold); margin-top:0;">🏆 قائمة المتصدرين</h2>
-            <div id="leaderboard-list" style="flex:1; overflow-y:auto; margin-bottom:20px; padding-right:10px;">
+    <div id="leaderboard-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:3500; align-items:center; justify-content:center; padding:15px;">
+        <div style="background:#1e2a4a; padding:20px; border-radius:20px; border:2px solid var(--gold); max-width:400px; width:95%; max-height:85vh; display:flex; flex-direction:column; box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);">
+            <h2 style="color:var(--bright-gold); margin:0 0 15px 0; text-align:center; font-size:22px;">🏆 المتصدرين</h2>
+            <div id="leaderboard-list" style="flex:1; overflow-y:auto; padding-right:5px;">
                 <!-- سيتم تعبئة القائمة هنا -->
             </div>
-            <button class="btn-nav" onclick="closeLeaderboard()">إغلاق</button>
+            <button class="btn-nav" onclick="closeLeaderboard()" style="margin-top:15px; padding:10px; font-size:16px;">إغلاق</button>
         </div>
     </div>
 
@@ -920,12 +920,12 @@ html_template = """
                 titleStatEl.innerHTML = `اللقب: <span style="color:${rank.color};">${rank.title}</span>`;
 
                 if (totalEl) totalEl.innerText = games;
+                if (totalEl) totalEl.innerText = games;
                 if (winsEl) winsEl.innerText = wins;
-                if (lossesEl) lossesEl.innerText = losses;
-                if (scoreEl) scoreEl.innerText = score.toLocaleString();
-                if (balanceLargeEl) balanceLargeEl.innerText = score.toLocaleString();
+                if (scoreEl) scoreEl.innerText = Number(score).toLocaleString();
+                if (balanceLargeEl) balanceLargeEl.innerText = Number(score).toLocaleString();
                 
-                const rate = games > 0 ? Math.round((wins / games) * 100) : 0;
+                const rate = games > 0 ? Math.round((Number(wins) / Number(games)) * 100) : 0;
                 if (rateEl) rateEl.innerText = rate + '%';
                 
                 // تحديث الرصيد في الواجهة الرئيسية فوراً
@@ -1578,18 +1578,30 @@ html_template = """
             if (!listEl) return;
             listEl.innerHTML = '';
             players.forEach((player, index) => {
+                const isTop3 = index < 3;
+                const colors = ['#ffd700', '#c0c0c0', '#cd7f32'];
+                const rankColor = isTop3 ? colors[index] : '#444';
+                
                 const div = document.createElement('div');
-                div.style.cssText = `display:flex; align-items:center; gap:10px; background:rgba(255,255,255,0.05); padding:10px; border-radius:10px; margin-bottom:10px; border-left:4px solid ${player.color};`;
+                div.style.cssText = `
+                    display:flex; align-items:center; gap:8px; 
+                    background:rgba(255,255,255,0.03); 
+                    padding:8px 12px; border-radius:12px; margin-bottom:6px; 
+                    border:1px solid ${isTop3 ? rankColor : 'transparent'};
+                    box-shadow: ${isTop3 ? '0 0 10px ' + rankColor + '44' : 'none'};
+                `;
+                
                 div.innerHTML = `
-                    <div style="font-size:20px; font-weight:bold; width:30px; color:var(--gold);">${index + 1}</div>
-                    <img src="${player.profile_image || 'https://www.gravatar.com/avatar/000?d=mp'}" style="width:40px; height:40px; border-radius:50%; border:1px solid ${player.color};">
-                    <div style="flex:1;">
-                        <div style="font-weight:bold; font-size:14px;">${player.display_name}</div>
-                        <div style="font-size:11px; color:${player.color};">${player.title}</div>
+                    <div style="font-size:14px; font-weight:bold; width:20px; color:${isTop3 ? rankColor : '#888'};">${index + 1}</div>
+                    <img src="${player.profile_image || 'https://www.gravatar.com/avatar/000?d=mp'}" 
+                         style="width:32px; height:32px; border-radius:50%; border:1.5px solid ${player.color || '#gold'};">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-weight:bold; font-size:13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${player.display_name}</div>
+                        <div style="font-size:10px; color:${player.color || '#aaa'};">${player.title || 'لاعب'}</div>
                     </div>
                     <div style="text-align:right;">
-                        <div style="color:var(--bright-gold); font-weight:bold;">${player.total_score.toLocaleString()} 🏆</div>
-                        <div style="font-size:10px; color:#aaa;">${player.wins} فوز</div>
+                        <div style="color:var(--bright-gold); font-weight:bold; font-size:13px;">${Number(player.total_score).toLocaleString()} 🏆</div>
+                        <div style="font-size:9px; color:#888;">${player.wins} فوز</div>
                     </div>
                 `;
                 listEl.appendChild(div);
