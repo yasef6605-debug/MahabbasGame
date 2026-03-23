@@ -69,7 +69,7 @@ def init_db():
         cursor.execute('ALTER TABLE statistics ADD COLUMN bonus_streak INTEGER DEFAULT 0')
     except:
         pass
-    conn.execute('UPDATE statistics SET total_score = 100 WHERE total_score < 100')
+    conn.execute('UPDATE statistics SET total_score = 100 WHERE total_score < 100 OR total_score IS NULL')
     conn.commit()
     conn.close()
     logger.info("Database initialized successfully")
@@ -880,9 +880,9 @@ html_template = """
         }
 
         function saveStats() {
-            if (window.playerId) {
-                socket.emit('update_stats', stats);
-            } else {
+            // سنلغي الحفظ المباشر من العميل للسيرفر لحماية الرصيد
+            // سيتم تحديث النقاط عبر أحداث خاصة في السيرفر فقط
+            if (!window.playerId) {
                 localStorage.setItem('mohibisStats', JSON.stringify(stats));
             }
         }
@@ -950,22 +950,27 @@ html_template = """
                 if (mode === 'guessing') {
                     pointsEarned = 50;
                 } else {
-                    // نظام النقاط المعتاد للأوضاع الأخرى
                     pointsEarned = 25 - (attemptsUsed * 5);
                 }
 
                 if (pointsEarned < 0) pointsEarned = 0;
                 if (pointsEarned > 50) pointsEarned = 50; 
-
-                stats.totalScore = Number(stats.totalScore) + pointsEarned;
                 
-                if (!stats.bestScoresByDifficulty[selectedDifficulty] || pointsEarned > stats.bestScoresByDifficulty[selectedDifficulty])
-                    stats.bestScoresByDifficulty[selectedDifficulty] = pointsEarned;
+                // إرسال طلب للسيرفر لإضافة النقاط بدلاً من تحديثها محلياً فقط
+                if (window.playerId) {
+                    socket.emit('add_points_server', {points: pointsEarned, mode: mode, win: true});
+                } else {
+                    stats.totalScore = Number(stats.totalScore) + pointsEarned;
+                }
             } else {
                 stats.losses++;
                 if (mode === 'guessing') {
                     pointsEarned = -10;
-                    stats.totalScore = Math.max(0, Number(stats.totalScore) + pointsEarned);
+                    if (window.playerId) {
+                        socket.emit('add_points_server', {points: pointsEarned, mode: mode, win: false});
+                    } else {
+                        stats.totalScore = Math.max(0, Number(stats.totalScore) + pointsEarned);
+                    }
                     showPointsNotification(pointsEarned);
                 }
             }
@@ -973,7 +978,6 @@ html_template = """
             saveStats();
             updateStatsDisplay();
             if (win && pointsEarned > 0) showPointsNotification(pointsEarned);
-            console.log(`Game Ended: Win=${win}, Mode=${mode}, AttemptsUsed=${attemptsUsed}, PointsEarned=${pointsEarned}, TotalScore=${stats.totalScore}`);
         }
 
         function showStats() {
@@ -1822,19 +1826,52 @@ def handle_get_profile():
             'statistics': dict(stats) if stats else None
         })
 
+@socketio.on('add_points_server')
+def handle_add_points_server(data):
+    if 'player_id' not in session: return
+    points = data.get('points', 0)
+    mode = data.get('mode', 'free')
+    win = data.get('win', False)
+    
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # تحديث النقاط في قاعدة البيانات مباشرة
+    cursor.execute('''
+        UPDATE statistics 
+        SET total_score = total_score + ?, 
+            total_games = total_games + 1,
+            wins = wins + ?,
+            losses = losses + ?
+        WHERE player_id = ?
+    ''', (points, 1 if win else 0, 0 if win else 1, session['player_id']))
+    
+    # تأمين الرصيد من النزول تحت 100 (اختياري، حسب رغبتك)
+    # cursor.execute('UPDATE statistics SET total_score = 100 WHERE player_id = ? AND total_score < 100', (session['player_id'],))
+    
+    conn.commit()
+    
+    # جلب البيانات المحدثة وإرسالها للعميل
+    cursor.execute('SELECT * FROM statistics WHERE player_id = ?', (session['player_id'],))
+    updated_stats = cursor.fetchone()
+    conn.close()
+    
+    emit('stats_updated', {'stats': dict(updated_stats)})
+    logger.info(f"Points added on server for {session['player_id']}: {points}")
+
 @socketio.on('update_stats')
 def handle_update_stats(data):
+    # تم تقييد هذه الوظيفة لمنع تصفير الحساب من جانب العميل
+    # سيتم فقط تحديث البيانات غير الحساسة إذا لزم الأمر
     if 'player_id' not in session: return
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('''
         UPDATE statistics SET 
-        total_games = ?, wins = ?, losses = ?, best_time = ?, 
-        total_attempts = ?, total_score = ?, wins_by_mode = ?, best_scores_by_difficulty = ?
+        best_time = ?, wins_by_mode = ?, best_scores_by_difficulty = ?
         WHERE player_id = ?
     ''', (
-        data['totalGames'], data['wins'], data['losses'], data['bestTime'],
-        data['totalAttempts'], data['totalScore'], json.dumps(data['winsByMode']),
+        data['bestTime'], json.dumps(data['winsByMode']),
         json.dumps(data['bestScoresByDifficulty']), session['player_id']
     ))
     conn.commit()
