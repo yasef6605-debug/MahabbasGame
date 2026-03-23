@@ -55,9 +55,15 @@ def init_db():
         total_score INTEGER DEFAULT 100,
         wins_by_mode TEXT, -- JSON string
         best_scores_by_difficulty TEXT, -- JSON string
+        last_bonus_date TEXT, -- YYYY-MM-DD
         FOREIGN KEY (player_id) REFERENCES players (id)
     )
     ''')
+    # فحص إذا كان العمود موجوداً بالفعل (للترقية)
+    try:
+        cursor.execute('ALTER TABLE statistics ADD COLUMN last_bonus_date TEXT')
+    except:
+        pass
     conn.execute('UPDATE statistics SET total_score = 100 WHERE total_score < 100')
     conn.commit()
     conn.close()
@@ -480,10 +486,16 @@ html_template = """
     <div id="main-ui" style="display:none; height:100%; display:flex; flex-direction:column;">
         <div id="header">
             <div class="user-info" onclick="showProfile()">
-                <img id="header-profile-img" src="https://www.gravatar.com/avatar/000?d=mp">
+                <div id="header-profile-img-container" style="position:relative;">
+                    <img id="header-profile-img" src="https://www.gravatar.com/avatar/000?d=mp">
+                    <div id="header-player-level" style="position:absolute; bottom:-5px; right:-5px; background:var(--gold); color:black; border-radius:50%; width:18px; height:18px; font-size:10px; display:flex; align-items:center; justify-content:center; font-weight:bold; border:1px solid var(--dark-blue);">1</div>
+                </div>
                 <div style="display:flex; flex-direction:column;">
                     <span id="current-displayname">جاري التحميل...</span>
-                    <span id="current-balance" style="color:var(--gold); font-size:12px; font-weight:bold;">رصيد: 0 🏆</span>
+                    <div style="display:flex; align-items:center; gap:5px;">
+                        <span id="current-title" style="font-size:10px; color:#aaa; border:1px solid #444; padding:0 5px; border-radius:4px;">مبتدئ</span>
+                        <span id="current-balance" style="color:var(--gold); font-size:12px; font-weight:bold;">رصيد: 0 🏆</span>
+                    </div>
                 </div>
             </div>
             <div style="color:var(--bright-gold); font-weight:bold;">لعبة المحيبس 💍 <span style="font-size:10px; opacity:0.5;">v1.5</span></div>
@@ -494,10 +506,16 @@ html_template = """
         </div>
 
         <div id="mode-screen">
+            <div id="daily-bonus-container" style="width:100%; max-width:300px; margin-bottom:10px;">
+                <button id="daily-bonus-btn" class="btn-nav" onclick="claimDailyBonus()" style="background:linear-gradient(to bottom, #ff9800, #f57c00); font-size:16px; padding:10px; width:100%;">🎁 احصل على مكافأتك اليومية (100 🏆)</button>
+            </div>
             <button class="btn-nav" onclick="startGame('guessing')">وضع التخمين</button>
             <button class="btn-nav" onclick="startGame('challenge')">وضع التحدي</button>
             <button class="btn-nav" onclick="toggleSidebar(true)" style="background:linear-gradient(to bottom, #1e2a4a, #0f192d); color:var(--gold); border:1px solid var(--gold);">لعب أونلاين</button>
-            <button class="btn-nav" onclick="showStats()" style="background:linear-gradient(to bottom, #444, #222); color:white;">الإحصائيات</button>
+            <div style="display:flex; gap:10px; width:100%; max-width:300px;">
+                <button class="btn-nav" onclick="showLeaderboard()" style="flex:1; background:linear-gradient(to bottom, #d4af37, #b8860b); font-size:16px; padding:10px;">🏆 المتصدرين</button>
+                <button class="btn-nav" onclick="showStats()" style="flex:1; background:linear-gradient(to bottom, #444, #222); color:white; font-size:16px; padding:10px;">📊 الإحصائيات</button>
+            </div>
         </div>
 
         <!-- وضع اللعب الفردي -->
@@ -512,7 +530,8 @@ html_template = """
                 </div>
                 {% endfor %}
             </div>
-            <div id="game-controls" style="display:flex; gap:10px; justify-content:center;">
+            <div id="game-controls" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+                <button id="hint-btn" class="btn-nav" onclick="useHint()" style="background:linear-gradient(to bottom, #9c27b0, #7b1fa2); color:white; font-size:14px; padding:10px 20px; display:none;">💡 تلميح (30 🏆)</button>
                 <button id="play-again-btn" class="btn-nav" onclick="resetCurrentGame()" style="display:none; background:linear-gradient(to bottom, #44cc44, #228b22); color:white;">لعب مرة أخرى</button>
                 <button class="btn-nav" onclick="backToMenu()">رجوع للقائمة</button>
             </div>
@@ -576,6 +595,17 @@ html_template = """
                 </div>
                 <button class="btn-nav" onclick="leaveOnlineGame()" style="font-size:12px; padding:8px 12px; width:auto; background:red; border-radius:10px;">انسحاب</button>
             </div>
+        </div>
+    </div>
+
+    <!-- نافذة المتصدرين -->
+    <div id="leaderboard-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:3500; align-items:center; justify-content:center; padding:20px;">
+        <div style="background:#1e2a4a; padding:30px; border-radius:20px; border:2px solid var(--gold); max-width:500px; width:100%; max-height:90vh; display:flex; flex-direction:column;">
+            <h2 style="color:var(--bright-gold); margin-top:0;">🏆 قائمة المتصدرين</h2>
+            <div id="leaderboard-list" style="flex:1; overflow-y:auto; margin-bottom:20px; padding-right:10px;">
+                <!-- سيتم تعبئة القائمة هنا -->
+            </div>
+            <button class="btn-nav" onclick="closeLeaderboard()">إغلاق</button>
         </div>
     </div>
 
@@ -740,6 +770,8 @@ html_template = """
                 const nameEl = document.getElementById('current-displayname');
                 const imgEl = document.getElementById('header-profile-img');
                 const balanceEl = document.getElementById('current-balance');
+                const titleEl = document.getElementById('current-title');
+                const levelEl = document.getElementById('header-player-level');
                 
                 if (nameEl) nameEl.innerText = window.displayName;
                 if (imgEl) imgEl.src = window.profileImage;
@@ -754,14 +786,41 @@ html_template = """
                         totalAttempts: s.total_attempts || 0,
                         totalScore: s.total_score || 0,
                         winsByMode: typeof s.wins_by_mode === 'string' ? JSON.parse(s.wins_by_mode) : s.wins_by_mode || { guessing: 0, challenge: 0, online: 0 },
-                        bestScoresByDifficulty: typeof s.best_scores_by_difficulty === 'string' ? JSON.parse(s.best_scores_by_difficulty) : s.best_scores_by_difficulty || { easy: 0, medium: 0, hard: 0 }
+                        bestScoresByDifficulty: typeof s.best_scores_by_difficulty === 'string' ? JSON.parse(s.best_scores_by_difficulty) : s.best_scores_by_difficulty || { easy: 0, medium: 0, hard: 0 },
+                        lastBonusDate: s.last_bonus_date
                     };
-                    if (balanceEl) balanceEl.innerText = `رصيد: ${stats.totalScore} 🏆`;
+                    if (balanceEl) balanceEl.innerText = `رصيد: ${stats.totalScore.toLocaleString()} 🏆`;
+                    
+                    // تحديث اللقب والمستوى
+                    const rank = getRankData(stats.totalScore);
+                    if (titleEl) {
+                        titleEl.innerText = rank.title;
+                        titleEl.style.color = rank.color;
+                        titleEl.style.borderColor = rank.color;
+                    }
+                    if (levelEl) levelEl.innerText = rank.level;
+
+                    // فحص المكافأة اليومية
+                    const today = new Date().toISOString().split('T')[0];
+                    if (stats.lastBonusDate === today) {
+                        document.getElementById('daily-bonus-container').style.display = 'none';
+                    } else {
+                        document.getElementById('daily-bonus-container').style.display = 'block';
+                    }
                 }
                 updateStatsDisplay();
             } catch (err) {
                 console.error('Error updating user data:', err);
             }
+        }
+
+        function getRankData(score) {
+            if (score < 500) return {level: 1, title: "مبتدئ", color: "#aaa"};
+            if (score < 1500) return {level: 2, title: "هاوي", color: "#44cc44"};
+            if (score < 3500) return {level: 3, title: "محترف", color: "#2196F3"};
+            if (score < 7000) return {level: 4, title: "صياد", color: "#9c27b0"};
+            if (score < 15000) return {level: 5, title: "خبير محيبس", color: "#ff9800"};
+            return {level: 6, title: "ملك المحيبس 👑", color: "#f9d71c"};
         }
 
         // --- وظائف الملف الشخصي ---
@@ -827,17 +886,28 @@ html_template = """
                 const games = stats && stats.totalGames !== undefined ? parseInt(stats.totalGames) : 0;
                 const losses = stats && stats.losses !== undefined ? parseInt(stats.losses) : 0;
                 
-                const level = Math.floor(score / 1000) + 1;
+                const rank = getRankData(score);
                 
                 const levelEl = document.getElementById('stat-level');
                 const totalEl = document.getElementById('stat-total');
                 const winsEl = document.getElementById('stat-wins');
-                const lossesEl = document.getElementById('stat-losses');
                 const scoreEl = document.getElementById('stat-score');
                 const balanceLargeEl = document.getElementById('stat-balance-large');
                 const rateEl = document.getElementById('stat-rate');
                 
-                if (levelEl) levelEl.innerText = level;
+                if (levelEl) {
+                    levelEl.innerText = rank.level;
+                    levelEl.style.color = rank.color;
+                }
+                // إضافة اللقب في نافذة الإحصائيات
+                let titleStatEl = document.getElementById('stat-title-display');
+                if (!titleStatEl) {
+                    titleStatEl = document.createElement('p');
+                    titleStatEl.id = 'stat-title-display';
+                    levelEl.parentElement.appendChild(titleStatEl);
+                }
+                titleStatEl.innerHTML = `اللقب: <span style="color:${rank.color};">${rank.title}</span>`;
+
                 if (totalEl) totalEl.innerText = games;
                 if (winsEl) winsEl.innerText = wins;
                 if (lossesEl) lossesEl.innerText = losses;
@@ -904,6 +974,25 @@ html_template = """
             document.getElementById('stats-modal').style.display = 'none';
         }
 
+        // --- وظائف الميزات الجديدة ---
+        function showLeaderboard() {
+            socket.emit('get_leaderboard');
+            document.getElementById('leaderboard-modal').style.display = 'flex';
+        }
+
+        function closeLeaderboard() {
+            document.getElementById('leaderboard-modal').style.display = 'none';
+        }
+
+        function claimDailyBonus() {
+            socket.emit('claim_daily_bonus');
+        }
+
+        function useHint() {
+            if (isGameOver) return;
+            socket.emit('use_hint');
+        }
+
         // --- وظائف اللعبة ---
         function startGame(mode) {
             selectedMode = mode;
@@ -935,6 +1024,14 @@ html_template = """
             }
             updateAttemptsDisplay();
             document.getElementById('timer-display').style.display = 'none';
+            
+            // إظهار زر التلميح فقط في وضع التخمين
+            const hintBtn = document.getElementById('hint-btn');
+            if (hintBtn) {
+                hintBtn.style.display = (selectedMode === 'guessing') ? 'block' : 'none';
+                hintBtn.disabled = false;
+                hintBtn.style.opacity = '1';
+            }
         }
 
         function checkHand(e, id, side) {
@@ -1435,8 +1532,79 @@ html_template = """
             if (data.stats) {
                 const s = data.stats;
                 stats.totalScore = s.total_score;
-                document.getElementById('current-balance').innerText = `رصيد: ${stats.totalScore} 🏆`;
+                stats.lastBonusDate = s.last_bonus_date;
+                document.getElementById('current-balance').innerText = `رصيد: ${stats.totalScore.toLocaleString()} 🏆`;
+                
+                // تحديث اللقب والمستوى
+                const rank = getRankData(stats.totalScore);
+                const titleEl = document.getElementById('current-title');
+                const levelEl = document.getElementById('header-player-level');
+                if (titleEl) {
+                    titleEl.innerText = rank.title;
+                    titleEl.style.color = rank.color;
+                    titleEl.style.borderColor = rank.color;
+                }
+                if (levelEl) levelEl.innerText = rank.level;
+
+                if (data.bonus_claimed) {
+                    showPointsNotification(data.amount);
+                    alert(`مبروك! حصلت على مكافأتك اليومية: ${data.amount} 🏆`);
+                    document.getElementById('daily-bonus-container').style.display = 'none';
+                }
                 updateStatsDisplay();
+            }
+        });
+
+        socket.on('leaderboard_data', (players) => {
+            const listEl = document.getElementById('leaderboard-list');
+            if (!listEl) return;
+            listEl.innerHTML = '';
+            players.forEach((player, index) => {
+                const div = document.createElement('div');
+                div.style.cssText = `display:flex; align-items:center; gap:10px; background:rgba(255,255,255,0.05); padding:10px; border-radius:10px; margin-bottom:10px; border-left:4px solid ${player.color};`;
+                div.innerHTML = `
+                    <div style="font-size:20px; font-weight:bold; width:30px; color:var(--gold);">${index + 1}</div>
+                    <img src="${player.profile_image || 'https://www.gravatar.com/avatar/000?d=mp'}" style="width:40px; height:40px; border-radius:50%; border:1px solid ${player.color};">
+                    <div style="flex:1;">
+                        <div style="font-weight:bold; font-size:14px;">${player.display_name}</div>
+                        <div style="font-size:11px; color:${player.color};">${player.title}</div>
+                    </div>
+                    <div style="text-align:right;">
+                        <div style="color:var(--bright-gold); font-weight:bold;">${player.total_score.toLocaleString()} 🏆</div>
+                        <div style="font-size:10px; color:#aaa;">${player.wins} فوز</div>
+                    </div>
+                `;
+                listEl.appendChild(div);
+            });
+        });
+
+        socket.on('hint_purchased', (data) => {
+            if (data.success) {
+                // منطق التلميح: كشف يد خاطئة واحدة
+                let wrongHands = [];
+                for (let i = 1; i <= 8; i++) {
+                    const box = document.getElementById('box' + i);
+                    if (i !== ringPosition && !box.classList.contains('fail')) {
+                        wrongHands.push(i);
+                    }
+                }
+                
+                if (wrongHands.length > 0) {
+                    const randomWrong = wrongHands[Math.floor(Math.random() * wrongHands.length)];
+                    const side = (randomWrong % 2 !== 0) ? 'left' : 'right';
+                    const box = document.getElementById('box' + randomWrong);
+                    const img = document.getElementById('img' + randomWrong);
+                    
+                    box.classList.add('fail');
+                    img.src = '/static/' + side + '_open.png';
+                    
+                    // تعطيل زر التلميح بعد الاستخدام
+                    const hintBtn = document.getElementById('hint-btn');
+                    hintBtn.disabled = true;
+                    hintBtn.style.opacity = '0.5';
+                    
+                    showPointsNotification(-data.cost);
+                }
             }
         });
 
@@ -1460,6 +1628,15 @@ html_template = """
 @app.route('/')
 def index():
     return render_template_string(html_template)
+
+# --- دوال مساعدة ---
+def get_player_rank_data(score):
+    if score < 500: return {"level": 1, "title": "مبتدئ", "color": "#aaa"}
+    if score < 1500: return {"level": 2, "title": "هاوي", "color": "#44cc44"}
+    if score < 3500: return {"level": 3, "title": "محترف", "color": "#2196F3"}
+    if score < 7000: return {"level": 4, "title": "صياد", "color": "#9c27b0"}
+    if score < 15000: return {"level": 5, "title": "خبير محيبس", "color": "#ff9800"}
+    return {"level": 6, "title": "ملك المحيبس 👑", "color": "#f9d71c"}
 
 # --- أحداث SocketIO ---
 
@@ -1647,6 +1824,84 @@ def handle_update_stats(data):
         json.dumps(data['bestScoresByDifficulty']), session['player_id']
     ))
     conn.commit()
+    conn.close()
+
+@socketio.on('get_leaderboard')
+def handle_get_leaderboard():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    # جلب أفضل 10 لاعبين بناءً على مجموع النقاط
+    cursor.execute('''
+        SELECT p.display_name, p.profile_image, s.total_score, s.wins
+        FROM players p
+        JOIN statistics s ON p.id = s.player_id
+        ORDER BY s.total_score DESC
+        LIMIT 10
+    ''')
+    top_players = [dict(row) for row in cursor.fetchall()]
+    conn.close()
+    
+    # إضافة الألقاب لكل لاعب في القائمة
+    for player in top_players:
+        rank_info = get_player_rank_data(player['total_score'])
+        player['title'] = rank_info['title']
+        player['color'] = rank_info['color']
+        
+    emit('leaderboard_data', top_players)
+
+@socketio.on('claim_daily_bonus')
+def handle_claim_daily_bonus():
+    if 'player_id' not in session: return
+    
+    today = datetime.now().strftime('%Y-%m-%d')
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute('SELECT last_bonus_date, total_score FROM statistics WHERE player_id = ?', (session['player_id'],))
+    row = cursor.fetchone()
+    
+    if row:
+        last_date = row['last_bonus_date']
+        if last_date == today:
+            emit('error', {'message': 'لقد حصلت على مكافأتك اليومية بالفعل! عد غداً'})
+        else:
+            bonus_amount = 100
+            cursor.execute('''
+                UPDATE statistics 
+                SET total_score = total_score + ?, last_bonus_date = ? 
+                WHERE player_id = ?
+            ''', (bonus_amount, today, session['player_id']))
+            conn.commit()
+            
+            # جلب البيانات المحدثة
+            cursor.execute('SELECT * FROM statistics WHERE player_id = ?', (session['player_id'],))
+            updated_stats = cursor.fetchone()
+            emit('stats_updated', {'stats': dict(updated_stats), 'bonus_claimed': True, 'amount': bonus_amount})
+    
+    conn.close()
+
+@socketio.on('use_hint')
+def handle_use_hint():
+    if 'player_id' not in session: return
+    
+    hint_cost = 30
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute('SELECT total_score FROM statistics WHERE player_id = ?', (session['player_id'],))
+    row = cursor.fetchone()
+    
+    if row and row['total_score'] >= hint_cost:
+        cursor.execute('UPDATE statistics SET total_score = total_score - ? WHERE player_id = ?', (hint_cost, session['player_id']))
+        conn.commit()
+        
+        cursor.execute('SELECT * FROM statistics WHERE player_id = ?', (session['player_id'],))
+        updated_stats = cursor.fetchone()
+        emit('stats_updated', {'stats': dict(updated_stats)})
+        emit('hint_purchased', {'success': True, 'cost': hint_cost})
+    else:
+        emit('error', {'message': 'رصيدك غير كافٍ لشراء تلميح! (التكلفة 30 🏆)'})
+    
     conn.close()
 
 # --- منطق الأونلاين ---
