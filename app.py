@@ -15,7 +15,8 @@ logger = logging.getLogger("MohibisGame")
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mohibis_secret_key_2024'
-socketio = SocketIO(app, cors_allowed_origins="*", manage_session=True)
+# تحسين أداء السوكيت
+socketio = SocketIO(app, cors_allowed_origins="*", manage_session=True, async_mode='eventlet')
 
 DB_PATH = 'mohibis.db'
 
