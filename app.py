@@ -383,8 +383,9 @@ html_template = """
             border: 2px solid var(--gold);
             border-radius: 15px;
             padding: 10px;
-            width: 280px; /* زيادة العرض للكيبورد */
-            max-height: 450px;
+            width: 90%; /* عرض مرن يناسب الموبايل */
+            max-width: 450px; /* أقصى عرض لتسهيل الكتابة */
+            max-height: 400px;
             overflow-y: auto;
             z-index: 2000;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -406,8 +407,8 @@ html_template = """
             background: none;
             border: none;
             color: white;
-            padding: 5px;
-            font-size: 14px;
+            padding: 10px;
+            font-size: 16px; /* حجم خط أكبر لمنع الزووم في الآيفون وتسهيل القراءة */
             outline: none;
         }
         .chat-send-btn {
