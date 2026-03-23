@@ -428,18 +428,18 @@ html_template = """
 
         .emoji-btn:hover { background: rgba(255,255,255,0.1); }
 
-        /* نافذة الملف الشخصي المنسدلة من الهيدر (جهة اليمين كما في الرسم) */
+        /* نافذة الملف الشخصي المنسدلة من الهيدر (جهة اليسار كما في الرسم الجديد) */
         #profile-modal {
             display: none;
             position: absolute;
             top: 62px;
-            right: 0;
-            left: auto;
+            left: 0;
+            right: auto;
             width: 100%;
             height: calc(100% - 62px);
-            background: rgba(0,0,0,0.2); /* خلفية شفافة جداً */
+            background: rgba(0,0,0,0.1);
             z-index: 2000;
-            justify-content: flex-end; /* محاذاة لليمين */
+            justify-content: flex-start; /* محاذاة لليسار */
             align-items: flex-start;
             overflow: hidden;
             pointer-events: none;
@@ -452,19 +452,19 @@ html_template = """
 
         .profile-content {
             background: linear-gradient(to bottom, #1e2a4a, #0f192d);
-            width: 80px; /* العرض الجديد كما طلبت */
-            padding: 8px;
-            border-radius: 0 0 0 15px;
+            width: 60px; /* العرض الجديد 60 بكسل */
+            padding: 5px;
+            border-radius: 0 0 15px 0; /* انحناء من جهة اليمين السفلية */
             border: 1px solid var(--gold);
             border-top: none;
-            border-right: none;
-            box-shadow: -3px 5px 20px rgba(0,0,0,0.6);
+            border-left: none; /* ملتصقة بالحافة اليسرى */
+            box-shadow: 3px 5px 20px rgba(0,0,0,0.6);
             transform: translateY(-100%);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         #profile-modal.active .profile-content {
@@ -533,60 +533,60 @@ html_template = """
 
     <div id="main-ui" style="display:none; height:100%; display:flex; flex-direction:column; position:relative;">
         <div id="header">
-            <div class="user-info" onclick="showProfile()">
-                <div id="header-profile-img-container" style="position:relative;">
-                    <img id="header-profile-img" src="https://www.gravatar.com/avatar/000?d=mp">
-                    <div id="header-player-level" style="position:absolute; bottom:-5px; right:-5px; background:var(--gold); color:black; border-radius:50%; width:18px; height:18px; font-size:10px; display:flex; align-items:center; justify-content:center; font-weight:bold; border:1px solid var(--dark-blue);">1</div>
-                </div>
-                <div style="display:flex; flex-direction:column;">
-                    <span id="current-displayname">جاري التحميل...</span>
-                    <div style="display:flex; align-items:center; gap:5px;">
-                        <span id="current-title" style="font-size:10px; color:#aaa; border:1px solid #444; padding:0 5px; border-radius:4px;">مبتدئ</span>
-                        <span id="current-balance" style="color:var(--gold); font-size:12px; font-weight:bold;">رصيد: 0 🏆</span>
-                    </div>
-                </div>
-            </div>
-            <div style="color:var(--bright-gold); font-weight:bold;">لعبة المحيبس 💍 <span style="font-size:10px; opacity:0.5;">v1.5</span></div>
             <div style="display:flex; gap:10px;">
                 <button onclick="toggleSidebar(true)" style="background:none; border:none; color:var(--gold); cursor:pointer; font-size:20px;">👥</button>
-                <button onclick="logout()" style="background:none; border:none; color:#ff4444; cursor:pointer;">خروج</button>
+                <button onclick="logout()" style="background:none; border:none; color:#ff4444; cursor:pointer; font-size:14px;">خروج</button>
+            </div>
+            <div style="color:var(--bright-gold); font-weight:bold; font-size:14px;">لعبة المحيبس 💍</div>
+            <div class="user-info" onclick="showProfile()">
+                <div style="display:flex; flex-direction:column; align-items:flex-end;">
+                    <span id="current-displayname" style="font-size:12px;">...</span>
+                    <span id="current-balance" style="color:var(--gold); font-size:10px;">0 🏆</span>
+                </div>
+                <div id="header-profile-img-container" style="position:relative;">
+                    <img id="header-profile-img" src="https://www.gravatar.com/avatar/000?d=mp" style="width:30px; height:30px;">
+                    <div id="header-player-level" style="position:absolute; bottom:-3px; right:-3px; background:var(--gold); color:black; border-radius:50%; width:14px; height:14px; font-size:8px; display:flex; align-items:center; justify-content:center; font-weight:bold;">1</div>
+                </div>
             </div>
         </div>
 
         <!-- نافذة الملف الشخصي والإحصائيات المدمجة المنسدلة -->
         <div id="profile-modal" onclick="if(event.target === this) closeProfile()">
             <div class="profile-content">
-                <div style="background:rgba(255,215,0,0.1); padding:5px; border-radius:10px; border:1px solid var(--gold); text-align:center; width:100%;">
-                    <p style="margin:0; color:#aaa; font-size:8px;">الرصيد</p>
-                    <p style="font-size:12px; color:var(--bright-gold); font-weight:bold; margin:2px 0;"><span id="stat-balance-large">0</span></p>
-                    <div id="stat-title-display" style="font-size:7px;"></div>
+                <!-- الرصيد -->
+                <div style="background:rgba(255,215,0,0.1); padding:4px; border-radius:8px; border:1px solid var(--gold); text-align:center; width:100%;">
+                    <p style="margin:0; color:#aaa; font-size:7px;">رصيد</p>
+                    <p style="font-size:10px; color:var(--bright-gold); font-weight:bold; margin:1px 0; overflow:hidden; text-overflow:ellipsis;"><span id="stat-balance-large">0</span></p>
+                    <div id="stat-title-display" style="font-size:6px; white-space:nowrap; overflow:hidden;"></div>
                 </div>
 
-                <div style="display:flex; flex-direction:column; gap:5px; width:100%;">
-                    <div style="background:rgba(0,0,0,0.3); padding:5px; border-radius:6px; border:1px solid rgba(255,255,255,0.05); text-align:center;">
-                        <p style="margin:0; color:#aaa; font-size:7px;">المستوى</p>
-                        <span id="stat-level" style="color:var(--bright-gold); font-size:11px; font-weight:bold;">1</span>
+                <!-- الإحصائيات -->
+                <div style="display:flex; flex-direction:column; gap:4px; width:100%;">
+                    <div style="background:rgba(0,0,0,0.3); padding:4px; border-radius:5px; border:1px solid rgba(255,255,255,0.05); text-align:center;">
+                        <p style="margin:0; color:#aaa; font-size:6px;">مستوى</p>
+                        <span id="stat-level" style="color:var(--bright-gold); font-size:10px; font-weight:bold;">1</span>
                     </div>
-                    <div style="background:rgba(0,0,0,0.3); padding:5px; border-radius:6px; border:1px solid rgba(255,255,255,0.05); text-align:center;">
-                        <p style="margin:0; color:#aaa; font-size:7px;">الفوز</p>
-                        <span id="stat-rate" style="color:#44cc44; font-size:11px; font-weight:bold;">0%</span>
+                    <div style="background:rgba(0,0,0,0.3); padding:4px; border-radius:5px; border:1px solid rgba(255,255,255,0.05); text-align:center;">
+                        <p style="margin:0; color:#aaa; font-size:6px;">فوز</p>
+                        <span id="stat-rate" style="color:#44cc44; font-size:10px; font-weight:bold;">0%</span>
                     </div>
-                    <div style="background:rgba(0,0,0,0.3); padding:5px; border-radius:6px; border:1px solid rgba(255,255,255,0.05); text-align:center;">
-                        <p style="margin:0; color:#aaa; font-size:7px;">الألعاب</p>
-                        <span id="stat-total" style="color:white; font-size:11px; font-weight:bold;">0</span>
+                    <div style="background:rgba(0,0,0,0.3); padding:4px; border-radius:5px; border:1px solid rgba(255,255,255,0.05); text-align:center;">
+                        <p style="margin:0; color:#aaa; font-size:6px;">لعب</p>
+                        <span id="stat-total" style="color:white; font-size:10px; font-weight:bold;">0</span>
                     </div>
                 </div>
 
-                <div id="profile-edit-section" style="width:100%; border-top:1px solid rgba(255,255,255,0.1); padding-top:8px;">
-                    <div style="margin-bottom:8px;">
-                        <input type="text" id="edit-display-name" placeholder="لقب" style="width:100%; padding:4px; border-radius:4px; border:1px solid #444; background:rgba(0,0,0,0.2); color:white; font-size:9px; text-align:center;">
-                        <button class="btn-nav" onclick="updateProfileName()" style="width:100%; padding:4px; font-size:9px; margin:4px 0 0 0;">حفظ</button>
+                <!-- التعديل -->
+                <div id="profile-edit-section" style="width:100%; border-top:1px solid rgba(255,255,255,0.1); padding-top:6px;">
+                    <div style="margin-bottom:6px; display:flex; flex-direction:column; gap:3px;">
+                        <input type="text" id="edit-display-name" placeholder="لقب" style="width:100%; padding:3px; border-radius:3px; border:1px solid #444; background:rgba(0,0,0,0.2); color:white; font-size:8px; text-align:center;">
+                        <button class="btn-nav" onclick="updateProfileName()" style="width:100%; padding:3px; font-size:8px; margin:0;">حفظ</button>
                     </div>
                     <input type="file" id="profile-upload" onchange="uploadProfileImage(event)" accept="image/*" style="display:none;">
-                    <button class="btn-nav" onclick="document.getElementById('profile-upload').click()" style="background:rgba(255,255,255,0.05); color:#aaa; font-size:8px; padding:4px; margin:0; width:100%;">صورة 📷</button>
+                    <button class="btn-nav" onclick="document.getElementById('profile-upload').click()" style="background:rgba(255,255,255,0.05); color:#aaa; font-size:7px; padding:3px; margin:0; width:100%;">📷</button>
                 </div>
                 
-                <button class="btn-nav" onclick="closeProfile()" style="margin-top:5px; background:rgba(255,255,255,0.05); color:white; font-size:10px; padding:6px; width:100%;">إغلاق 🔼</button>
+                <button class="btn-nav" onclick="closeProfile()" style="margin-top:5px; background:rgba(255,255,255,0.1); color:white; font-size:9px; padding:4px; width:100%;">🔼</button>
             </div>
         </div>
             </div>
