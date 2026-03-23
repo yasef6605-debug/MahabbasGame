@@ -379,18 +379,70 @@ html_template = """
             bottom: 100%;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(15, 25, 45, 0.95);
+            background: rgba(15, 25, 45, 0.98);
             border: 2px solid var(--gold);
             border-radius: 15px;
             padding: 10px;
-            width: 200px;
-            max-height: 250px;
+            width: 280px; /* زيادة العرض للكيبورد */
+            max-height: 450px;
             overflow-y: auto;
             z-index: 2000;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
 
-        .quick-chat-dropdown.active { display: block; }
+        .quick-chat-dropdown.active { display: flex; flex-direction: column; gap: 10px; }
+
+        /* تنسيق خانة الكتابة والكيبورد */
+        .chat-input-container {
+            display: flex;
+            gap: 5px;
+            background: rgba(0,0,0,0.3);
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .chat-input-container input {
+            flex: 1;
+            background: none;
+            border: none;
+            color: white;
+            padding: 5px;
+            font-size: 14px;
+            outline: none;
+        }
+        .chat-send-btn {
+            background: var(--gold);
+            color: black;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .virtual-keyboard {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 3px;
+            background: rgba(255,255,255,0.05);
+            padding: 5px;
+            border-radius: 8px;
+        }
+        .key-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            padding: 8px 2px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .key-btn:hover { background: rgba(212, 175, 55, 0.3); }
+        .key-btn.wide { grid-column: span 2; }
+        .key-btn.extra-wide { grid-column: span 3; }
+        .key-btn.space { grid-column: span 5; }
+        .key-btn.special { background: rgba(212, 175, 55, 0.2); color: var(--gold); }
 
         .quick-msg-btn {
             display: block;
@@ -650,6 +702,13 @@ html_template = """
                 <div class="quick-chat-container">
                     <button class="btn-nav" onclick="toggleQuickChat()" style="font-size:12px; padding:8px 12px; width:auto; border-radius:10px;">💬 دردشة سريعة</button>
                     <div id="quick-chat-dropdown" class="quick-chat-dropdown">
+                        <div class="chat-input-container">
+                            <input type="text" id="chat-custom-input" placeholder="اكتب رسالتك..." readonly>
+                            <button class="chat-send-btn" onclick="sendCustomChatMessage()">إرسال</button>
+                        </div>
+                        <div id="keyboard-container" class="virtual-keyboard">
+                            <!-- الكيبورد سيتم تعبئته عبر JS -->
+                        </div>
                         <div class="emoji-grid">
                             <button class="emoji-btn" onclick="sendQuickMessage('😂')">😂</button>
                             <button class="emoji-btn" onclick="sendQuickMessage('🤣')">🤣</button>
@@ -746,6 +805,67 @@ html_template = """
         window.username = '';
         window.displayName = '';
         window.profileImage = '';
+
+        // --- متغيرات الكيبورد ---
+        let currentLang = 'ar';
+        const layouts = {
+            ar: [
+                ['ض', 'ص', 'ث', 'ق', 'ف', 'غ', 'ع', 'ه', 'خ', 'ح'],
+                ['ج', 'د', 'ش', 'س', 'ي', 'ب', 'ل', 'ا', 'ت', 'ن'],
+                ['م', 'ك', 'ط', 'ذ', 'ء', 'ؤ', 'ر', 'ى', 'ة', 'و'],
+                ['ز', 'ظ', '!', '؟', '.', 'مسح', 'ABC', 'مسافة']
+            ],
+            en: [
+                ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+                ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+                ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Del'],
+                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', 'عربي', 'Space']
+            ]
+        };
+
+        function initKeyboard() {
+            const container = document.getElementById('keyboard-container');
+            if (!container) return;
+            container.innerHTML = '';
+            const layout = layouts[currentLang];
+            layout.forEach(row => {
+                row.forEach(key => {
+                    const btn = document.createElement('button');
+                    btn.className = 'key-btn';
+                    if (key === 'مسافة' || key === 'Space') btn.className += ' space';
+                    if (key === 'مسح' || key === 'Del' || key === 'ABC' || key === 'عربي') btn.className += ' special wide';
+                    btn.innerText = key;
+                    btn.onclick = () => handleKeyPress(key);
+                    container.appendChild(btn);
+                });
+            });
+        }
+
+        function handleKeyPress(key) {
+            const input = document.getElementById('chat-custom-input');
+            if (key === 'مسح' || key === 'Del') {
+                input.value = input.value.slice(0, -1);
+            } else if (key === 'ABC') {
+                currentLang = 'en';
+                initKeyboard();
+            } else if (key === 'عربي') {
+                currentLang = 'ar';
+                initKeyboard();
+            } else if (key === 'مسافة' || key === 'Space') {
+                input.value += ' ';
+            } else {
+                input.value += key;
+            }
+        }
+
+        function sendCustomChatMessage() {
+            const input = document.getElementById('chat-custom-input');
+            const text = input.value.trim();
+            if (!text) return;
+            sendQuickMessage(text);
+            input.value = '';
+            toggleQuickChat();
+        }
 
         // نظام الإحصائيات
         let stats = {
@@ -1388,6 +1508,9 @@ html_template = """
         function toggleQuickChat() {
             const dropdown = document.getElementById('quick-chat-dropdown');
             dropdown.classList.toggle('active');
+            if (dropdown.classList.contains('active')) {
+                initKeyboard();
+            }
         }
 
         function sendQuickMessage(msg) {
@@ -2318,14 +2441,15 @@ def handle_check_hand(data):
 def handle_message(data):
     room_id = data.get('room_id')
     msg = data.get('message')
-    if room_id:
+    if room_id and msg:
+        sender_name = players[request.sid]['name']
         emit('chat_message', {
-            'sender': players[request.sid]['name'],
+            'sender': sender_name,
             'message': msg,
             'is_self': False
         }, room=room_id, skip_sid=request.sid)
         emit('chat_message', {
-            'sender': players[request.sid]['name'],
+            'sender': sender_name,
             'message': msg,
             'is_self': True
         }, room=request.sid)
