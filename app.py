@@ -435,7 +435,7 @@ html_template = """
             top: 60px; /* تحت الهيدر مباشرة */
             left: 10px; /* تغيير من اليمين إلى اليسار ليناسب موقع الملف الشخصي */
             right: auto;
-            width: 70px;
+            width: 80px; /* العرض الجديد كما طلبت */
             z-index: 9999;
             pointer-events: none;
         }
@@ -447,7 +447,7 @@ html_template = """
 
         .profile-content {
             background: linear-gradient(to bottom, #1e2a4a, #0f192d);
-            width: 70px;
+            width: 80px; /* العرض الجديد كما طلبت */
             padding: 5px;
             border-radius: 10px;
             border: 1px solid var(--gold);
