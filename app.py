@@ -428,6 +428,44 @@ html_template = """
 
         .emoji-btn:hover { background: rgba(255,255,255,0.1); }
 
+        /* نافذة الملف الشخصي المنسدلة */
+        #profile-modal {
+            display: none;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 3000;
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            align-items: flex-start;
+            justify-content: center;
+            overflow-y: auto;
+            padding-top: 20px;
+        }
+
+        #profile-modal.active {
+            top: 0;
+        }
+
+        .profile-content {
+            background: #1e2a4a;
+            padding: 25px;
+            border-radius: 0 0 25px 25px;
+            border: 2px solid var(--gold);
+            border-top: none;
+            max-width: 500px;
+            width: 95%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
         #chat-box {
             position: fixed;
             bottom: 20px;
@@ -517,10 +555,7 @@ html_template = """
             <button class="btn-nav" onclick="startGame('guessing')">وضع التخمين</button>
             <button class="btn-nav" onclick="startGame('challenge')">وضع التحدي</button>
             <button class="btn-nav" onclick="toggleSidebar(true)" style="background:linear-gradient(to bottom, #1e2a4a, #0f192d); color:var(--gold); border:1px solid var(--gold);">لعب أونلاين</button>
-            <div style="display:flex; gap:10px; width:100%; max-width:300px;">
-                <button class="btn-nav" onclick="showLeaderboard()" style="flex:1; background:linear-gradient(to bottom, #d4af37, #b8860b); font-size:16px; padding:10px;">🏆 المتصدرين</button>
-                <button class="btn-nav" onclick="showStats()" style="flex:1; background:linear-gradient(to bottom, #444, #222); color:white; font-size:16px; padding:10px;">📊 الإحصائيات</button>
-            </div>
+            <button class="btn-nav" onclick="showLeaderboard()" style="background:linear-gradient(to bottom, #d4af37, #b8860b); font-size:18px;">🏆 قائمة المتصدرين</button>
         </div>
 
         <!-- وضع اللعب الفردي -->
@@ -614,35 +649,55 @@ html_template = """
         </div>
     </div>
 
-    <!-- نافذة الإحصائيات -->
-    <div id="stats-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:3000; align-items:center; justify-content:center; padding:20px;">
-        <div style="background:#1e2a4a; padding:30px; border-radius:20px; border:2px solid var(--gold); max-width:500px; width:100%;">
-                <h2 style="color:var(--bright-gold);">📊 إحصائيات اللاعب</h2>
-                <div style="background:rgba(255,215,0,0.1); padding:15px; border-radius:15px; border:1px solid var(--gold); margin-bottom:20px; text-align:center;">
-                    <p style="margin:0; color:#aaa;">الرصيد الحالي</p>
-                    <p style="font-size:32px; color:var(--bright-gold); font-weight:bold; margin:5px 0;"><span id="stat-balance-large">0</span> 🏆</p>
+    <!-- نافذة الملف الشخصي والإحصائيات المدمجة -->
+    <div id="profile-modal">
+        <div class="profile-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h2 style="color:var(--bright-gold); margin:0;">👤 الملف الشخصي</h2>
+                <button onclick="closeProfile()" style="background:none; border:none; color:white; font-size:28px; cursor:pointer;">&times;</button>
+            </div>
+
+            <div style="background:rgba(255,215,0,0.1); padding:15px; border-radius:15px; border:1px solid var(--gold); margin-bottom:20px; text-align:center;">
+                <p style="margin:0; color:#aaa;">الرصيد الحالي</p>
+                <p style="font-size:32px; color:var(--bright-gold); font-weight:bold; margin:5px 0;"><span id="stat-balance-large">0</span> 🏆</p>
+                <div id="stat-title-display" style="font-size:14px; margin-top:5px;"></div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px;">
+                <div style="background:rgba(0,0,0,0.3); padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
+                    <p style="margin:0 0 5px 0; color:#aaa; font-size:12px;">المستوى</p>
+                    <span id="stat-level" style="color:var(--bright-gold); font-size:18px; font-weight:bold;">1</span>
                 </div>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px;">
-                <div style="background:rgba(0,0,0,0.3); padding:10px; border-radius:10px;">
-                    <p>المستوى: <span id="stat-level" style="color:var(--bright-gold);">1</span></p>
-                    <p>الرصيد: <span id="stat-score">0</span></p>
+                <div style="background:rgba(0,0,0,0.3); padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
+                    <p style="margin:0 0 5px 0; color:#aaa; font-size:12px;">نسبة الفوز</p>
+                    <span id="stat-rate" style="color:#44cc44; font-size:18px; font-weight:bold;">0%</span>
                 </div>
-                <div style="background:rgba(0,0,0,0.3); padding:10px; border-radius:10px;">
-                    <p>الألعاب: <span id="stat-total">0</span></p>
-                    <p>الفوز: <span id="stat-wins" style="color:#44cc44;">0</span></p>
-                    <p>نسبة الفوز: <span id="stat-rate" style="color:var(--gold);">0%</span></p>
+                <div style="background:rgba(0,0,0,0.3); padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
+                    <p style="margin:0 0 5px 0; color:#aaa; font-size:12px;">الألعاب</p>
+                    <span id="stat-total" style="color:white; font-size:18px; font-weight:bold;">0</span>
+                </div>
+                <div style="background:rgba(0,0,0,0.3); padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.05);">
+                    <p style="margin:0 0 5px 0; color:#aaa; font-size:12px;">الفوز</p>
+                    <span id="stat-wins" style="color:var(--gold); font-size:18px; font-weight:bold;">0</span>
                 </div>
             </div>
-            <div id="profile-edit-section" style="margin-top:20px; border-top:1px solid #444; padding-top:20px;">
-                <h4 style="color:var(--gold);">تعديل الملف الشخصي</h4>
-                <input type="text" id="edit-display-name" placeholder="اللقب الجديد" style="width:100%; padding:8px; margin-bottom:10px;">
-                <button class="btn-nav" onclick="updateProfileName()" style="font-size:14px; padding:10px;">حفظ الاسم</button>
-                <div style="margin-top:10px;">
-                    <label style="color:#aaa; font-size:12px;">تغيير الصورة:</label>
-                    <input type="file" onchange="uploadProfileImage(event)" accept="image/*" style="font-size:12px;">
+
+            <div id="profile-edit-section" style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;">
+                <h4 style="color:var(--gold); margin:0 0 15px 0;">⚙️ إعدادات الحساب</h4>
+                <div style="margin-bottom:15px;">
+                    <label style="display:block; color:#aaa; font-size:12px; margin-bottom:5px;">تغيير اللقب:</label>
+                    <div style="display:flex; gap:10px;">
+                        <input type="text" id="edit-display-name" placeholder="اللقب الجديد" style="flex:1; padding:10px; border-radius:10px; border:1px solid #444; background:rgba(0,0,0,0.2); color:white;">
+                        <button class="btn-nav" onclick="updateProfileName()" style="width:auto; padding:10px 20px; font-size:14px;">حفظ</button>
+                    </div>
+                </div>
+                <div>
+                    <label style="display:block; color:#aaa; font-size:12px; margin-bottom:5px;">تغيير الصورة الشخصية:</label>
+                    <input type="file" onchange="uploadProfileImage(event)" accept="image/*" style="font-size:12px; color:#aaa; background:rgba(0,0,0,0.2); padding:10px; border-radius:10px; width:100%;">
                 </div>
             </div>
-            <button class="btn-nav" onclick="closeStats()" style="margin-top:20px;">إغلاق</button>
+            
+            <button class="btn-nav" onclick="closeProfile()" style="margin-top:25px; background:rgba(255,255,255,0.1); color:white;">إغلاق</button>
         </div>
     </div>
 
@@ -864,7 +919,15 @@ html_template = """
                 stats: statsData
             });
             updateStatsDisplay();
-            document.getElementById('stats-modal').style.display = 'flex';
+            const modal = document.getElementById('profile-modal');
+            modal.style.display = 'flex';
+            setTimeout(() => modal.classList.add('active'), 10);
+        }
+
+        function closeProfile() {
+            const modal = document.getElementById('profile-modal');
+            modal.classList.remove('active');
+            setTimeout(() => modal.style.display = 'none', 500);
         }
 
         // --- وظائف الإحصائيات ---
@@ -981,12 +1044,11 @@ html_template = """
         }
 
         function showStats() {
-            loadStats();
-            document.getElementById('stats-modal').style.display = 'flex';
+            showProfile();
         }
 
         function closeStats() {
-            document.getElementById('stats-modal').style.display = 'none';
+            closeProfile();
         }
 
         // --- وظائف الميزات الجديدة ---
